@@ -1,0 +1,9 @@
+# @title Compress package segments in the package explorer
+# @description Compress all package name segments, except the final segment
+# @task_type LASTMOD
+#
+# Created by the Workspace Mechanic Preference Recorder
+#Sat Mar 01 12:37:00 CET 2014
+file_export_version=3.0
+/instance/org.eclipse.jdt.ui/PackagesView.pkgNamePatternForPackagesView=1.
+/instance/org.eclipse.jdt.ui/org.eclipse.jdt.ui.compresspackagenames=true

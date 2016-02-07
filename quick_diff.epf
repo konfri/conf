@@ -1,0 +1,14 @@
+# @title Quick Diff
+# @description Indicates changes to the last git commit in the quick diff mode
+# @task_type LASTMOD
+#
+# Created by the Workspace Mechanic Preference Recorder
+#Sat Nov 09 01:08:16 CET 2013
+/instance/org.eclipse.ui.editors/additionIndicationInOverviewRuler=true
+/instance/org.eclipse.ui.editors/additionIndicationColor=128,255,171
+file_export_version=3.0
+/instance/org.eclipse.ui.editors/quickdiff.defaultProvider=org.eclipse.egit.ui.internal.decorators.GitQuickDiffProvider
+/instance/org.eclipse.ui.editors/deletionIndicationColor=255,150,169
+/instance/org.eclipse.ui.editors/changeIndicationColor=232,229,2
+/instance/org.eclipse.ui.editors/deletionIndicationInOverviewRuler=true
+/instance/org.eclipse.ui.editors/changeIndicationInOverviewRuler=true

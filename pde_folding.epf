@@ -1,0 +1,8 @@
+# @title Enables folding for PDE editor
+# @description Enables the folding for the PDE editor
+# @task_type LASTMOD
+#
+# Created by the Workspace Mechanic Preference Recorder
+#Sat Nov 09 01:01:25 CET 2013
+file_export_version=3.0
+/instance/org.eclipse.pde.ui/editor.folding=true
