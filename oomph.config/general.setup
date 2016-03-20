@@ -183,6 +183,14 @@
       </setupTask>
       <description>e4 Tools for Eclispe Mars</description>
     </setupTask>
+    <setupTask
+        xsi:type="setup.p2:P2Task"
+        label="infinitest">
+      <requirement
+          name="org.infinitest.eclipse.feature.feature.group"/>
+      <repository
+          url="http://infinitest.github.io"/>
+    </setupTask>
   </setupTask>
   <setupTask
       xsi:type="setup:CompoundTask"
