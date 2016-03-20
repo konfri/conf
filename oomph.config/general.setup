@@ -824,6 +824,15 @@
           value="${workspace.location|basePath|lastSegment|upper}"/>
       <description>Sets the workspace name (helps to differentiate between multiple opened eclipse instances)</description>
     </setupTask>
+    <setupTask
+        xsi:type="setup:CompoundTask"
+        id="static_imports"
+        name="static_imports">
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.jdt.ui/content_assist_favorite_static_members"
+          value="org.assertj.core.api.Assertions.*;org.mockito.BDDMockito.*"/>
+    </setupTask>
     <description></description>
   </setupTask>
   <setupTask
