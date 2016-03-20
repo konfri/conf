@@ -1,8 +1,0 @@
-# @title Show heap status
-# @description Displays the heap status in the status bar.
-# @task_type LASTMOD
-#
-# Created by the Workspace Mechanic Preference Recorder
-#Fri Feb 14 20:20:59 CET 2014
-/instance/org.eclipse.ui/SHOW_MEMORY_MONITOR=true
-file_export_version=3.0

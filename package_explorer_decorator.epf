@@ -1,8 +1,0 @@
-# @title Package explorer decorator
-# @description Enables the java type decorator e.g. shows an I for interface types
-# @task_type LASTMOD
-#
-# Created by the Workspace Mechanic Preference Recorder
-#Sat Mar 29 15:05:27 CET 2014
-/instance/org.eclipse.ui.workbench/ENABLED_DECORATORS=org.eclipse.jdt.ui.override.decorator\:true,org.eclipse.jdt.ui.interface.decorator\:true,org.eclipse.jdt.ui.buildpath.decorator\:true
-file_export_version=3.0

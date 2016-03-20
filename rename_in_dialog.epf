@@ -1,8 +1,0 @@
-# @title Rename in dialog
-# @description Disables the in-place renaming, instead the rename dialog is shown that selects the whole expression
-# @task_type LASTMOD
-#
-# Created by the Workspace Mechanic Preference Recorder
-#Sat Feb 15 15:41:13 CET 2014
-file_export_version=3.0
-/instance/org.eclipse.jdt.ui/Refactor.lightweight=false

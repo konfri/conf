@@ -1,8 +1,0 @@
-# @title Auto complete
-# @description Adjusts the activation time to 10 ms
-# @task_type LASTMOD
-#
-# Created by the Workspace Mechanic Preference Recorder
-#Sun Jan 05 13:55:54 CET 2014
-file_export_version=3.0
-/instance/org.eclipse.jdt.ui/content_assist_autoactivation_delay=10

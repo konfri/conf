@@ -1,8 +1,0 @@
-# @title Unlimit local history
-# @description Dicards the limit of the local history
-# @task_type LASTMOD
-#
-# Created by the Workspace Mechanic Preference Recorder
-#Sat Nov 09 01:21:52 CET 2013
-file_export_version=3.0
-/instance/org.eclipse.core.resources/description.applyfilestatepolicy=false

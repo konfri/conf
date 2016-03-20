@@ -1,8 +1,0 @@
-# @title Show line numbers
-# @description Shows the line numbers in the source editor 
-# @task_type LASTMOD
-#
-# Created by the Workspace Mechanic Preference Recorder
-#Sat Nov 09 01:09:16 CET 2013
-/instance/org.eclipse.ui.editors/lineNumberRuler=true
-file_export_version=3.0

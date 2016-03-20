@@ -1,8 +1,0 @@
-# @title Remove promt dialog while closing the last window
-# @description Remove promt dialog while closing the last window
-# @task_type LASTMOD
-#
-# Created by the Workspace Mechanic Preference Recorder
-#Sun Nov 10 18:33:59 CET 2013
-/instance/org.eclipse.ui.ide/EXIT_PROMPT_ON_CLOSE_LAST_WINDOW=false
-file_export_version=3.0

@@ -1,8 +1,0 @@
-# @title Highlight matching brackets
-# @description Matching brackets are highlighted
-# @task_type LASTMOD
-#
-# Created by the Workspace Mechanic Preference Recorder
-#Sat Nov 09 00:57:56 CET 2013
-file_export_version=3.0
-/instance/org.eclipse.jdt.ui/matchingBracketsColor=0,255,0
