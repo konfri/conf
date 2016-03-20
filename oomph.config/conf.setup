@@ -137,6 +137,15 @@
     </setupTask>
     <setupTask
         xsi:type="setup:CompoundTask"
+        name="no_prompt_while_closing_the_last_window">
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.ui.ide/EXIT_PROMPT_ON_CLOSE_LAST_WINDOW"
+          value="false"/>
+      <description>Suppress the prompt dialog while closing the last eclipse window (just close the last window)</description>
+    </setupTask>
+    <setupTask
+        xsi:type="setup:CompoundTask"
         name="workspace_name">
       <setupTask
           xsi:type="setup:PreferenceTask"
