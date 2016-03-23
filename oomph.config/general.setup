@@ -465,7 +465,7 @@
       <setupTask
           xsi:type="setup:PreferenceTask"
           key="/instance/org.eclipse.jdt.debug.ui/org.eclipse.jdt.debug.ui.prompt_delete_conditional_breakpoint"
-          value="true"/>
+          value="false"/>
       <description>No prompt while deleting a conditional breakpoint.</description>
     </setupTask>
     <setupTask
