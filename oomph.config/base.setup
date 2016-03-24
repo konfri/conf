@@ -160,6 +160,35 @@
         targetURL="${installation.location|uri}/oomphVariables.txt"
         encoding="UTF-8"/>
   </setupTask>
+  <setupTask
+      xsi:type="setup:CompoundTask"
+      name="run_configuration_ignore_strict_jre_check">
+    <setupTask
+        xsi:type="setup:PreferenceTask"
+        key="/instance/org.eclipse.jdt.launching/org.eclipse.jdt.launching.PREF_STRICTLY_COMPATIBLE_JRE_NOT_AVAILABLE"
+        value="ignore"/>
+    <description>This property is considered if starting a run configuration.</description>
+  </setupTask>
+  <setupTask
+      xsi:type="setup:CompoundTask"
+      name="warning_definitions">
+    <setupTask
+        xsi:type="setup:PreferenceTask"
+        key="/instance/org.eclipse.jdt.core/org.eclipse.jdt.core.compiler.problem.fieldHiding"
+        value="ignore"/>
+    <setupTask
+        xsi:type="setup:PreferenceTask"
+        key="/instance/org.eclipse.jdt.core/org.eclipse.jdt.core.compiler.problem.nonExternalizedStringLiteral"
+        value="ignore"/>
+    <setupTask
+        xsi:type="setup:PreferenceTask"
+        key="/instance/org.eclipse.jdt.core/org.eclipse.jdt.core.compiler.problem.syntheticAccessEmulation"
+        value="ignore"/>
+    <setupTask
+        xsi:type="setup:PreferenceTask"
+        key="/instance/org.eclipse.jdt.core/org.eclipse.jdt.core.compiler.problem.unqualifiedFieldAccess"
+        value="ignore"/>
+  </setupTask>
   <logicalProjectContainer
       xsi:type="setup:ProjectCatalog"
       href="index:/org.eclipse.setup#//@projectCatalogs[name='com.github']"/>
