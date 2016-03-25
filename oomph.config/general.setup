@@ -229,7 +229,7 @@
       <setupTask
           xsi:type="setup:PreferenceTask"
           key="/instance/org.eclipse.ui.editors/occurrenceIndicationColor"
-          value="0,255,0"/>
+          value="155,255,155"/>
       <setupTask
           xsi:type="setup:PreferenceTask"
           key="/instance/org.eclipse.ui.editors/overrideIndicatorColor"
@@ -241,7 +241,7 @@
       <setupTask
           xsi:type="setup:PreferenceTask"
           key="/instance/org.eclipse.ui.editors/writeOccurrenceIndicationColor"
-          value="255,0,255"/>
+          value="255,117,255"/>
       <description>Annotations in text source editor</description>
     </setupTask>
     <setupTask
