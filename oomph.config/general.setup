@@ -197,6 +197,15 @@
       name="custom_user_preferences">
     <setupTask
         xsi:type="setup:CompoundTask"
+        name="always_launch_last_run_configuration">
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.debug.ui/org.eclipse.debug.ui.UseContextualLaunch"
+          value="false"/>
+      <description>Execute always the last run configuration with F11</description>
+    </setupTask>
+    <setupTask
+        xsi:type="setup:CompoundTask"
         name="annotations">
       <setupTask
           xsi:type="setup:PreferenceTask"
@@ -246,389 +255,16 @@
     </setupTask>
     <setupTask
         xsi:type="setup:CompoundTask"
-        name="discard_console_limit">
+        name="code_templates">
       <setupTask
           xsi:type="setup:PreferenceTask"
-          key="/instance/org.eclipse.debug.ui/Console.limitConsoleOutput"
-          value="false"/>
-      <description>Discards the limit of visible lines in the console view</description>
-    </setupTask>
-    <setupTask
-        xsi:type="setup:CompoundTask"
-        name="rename_in_dialog">
-      <setupTask
-          xsi:type="setup:PreferenceTask"
-          key="/instance/org.eclipse.jdt.ui/Refactor.lightweight"
-          value="false"/>
-      <description>Disables the in-place renaming, instead the rename dialog is shown that selects the whole expression</description>
-    </setupTask>
-    <setupTask
-        xsi:type="setup:CompoundTask"
-        name="smart_insert">
-      <setupTask
-          xsi:type="setup:PreferenceTask"
-          key="/instance/org.eclipse.jdt.ui/escapeStrings"
-          value="true"/>
-      <setupTask
-          xsi:type="setup:PreferenceTask"
-          key="/instance/org.eclipse.jdt.ui/smart_opening_brace"
-          value="true"/>
-      <setupTask
-          xsi:type="setup:PreferenceTask"
-          key="/instance/org.eclipse.jdt.ui/smart_semicolon"
-          value="true"/>
-      <description>Smart insert for { and ;</description>
-    </setupTask>
-    <setupTask
-        xsi:type="setup:CompoundTask"
-        name="syntax_color">
-      <setupTask
-          xsi:type="setup:PreferenceTask"
-          key="/instance/org.eclipse.jdt.ui/java_keyword_return_underline"
-          value="true"/>
-      <setupTask
-          xsi:type="setup:PreferenceTask"
-          key="/instance/org.eclipse.jdt.ui/semanticHighlighting.abstractClass.enabled"
-          value="true"/>
-      <setupTask
-          xsi:type="setup:PreferenceTask"
-          key="/instance/org.eclipse.jdt.ui/semanticHighlighting.abstractMethodInvocation.color"
-          value="139,136,22"/>
-      <setupTask
-          xsi:type="setup:PreferenceTask"
-          key="/instance/org.eclipse.jdt.ui/semanticHighlighting.abstractMethodInvocation.enabled"
-          value="true"/>
-      <setupTask
-          xsi:type="setup:PreferenceTask"
-          key="/instance/org.eclipse.jdt.ui/semanticHighlighting.autoboxing.bold"
-          value="true"/>
-      <setupTask
-          xsi:type="setup:PreferenceTask"
-          key="/instance/org.eclipse.jdt.ui/semanticHighlighting.autoboxing.enabled"
-          value="true"/>
-      <setupTask
-          xsi:type="setup:PreferenceTask"
-          key="/instance/org.eclipse.jdt.ui/semanticHighlighting.enum.enabled"
-          value="true"/>
-      <setupTask
-          xsi:type="setup:PreferenceTask"
-          key="/instance/org.eclipse.jdt.ui/semanticHighlighting.inheritedField.color"
-          value="255,0,255"/>
-      <setupTask
-          xsi:type="setup:PreferenceTask"
-          key="/instance/org.eclipse.jdt.ui/semanticHighlighting.inheritedField.enabled"
-          value="true"/>
-      <setupTask
-          xsi:type="setup:PreferenceTask"
-          key="/instance/org.eclipse.jdt.ui/semanticHighlighting.inheritedMethodInvocation.color"
-          value="255,0,255"/>
-      <setupTask
-          xsi:type="setup:PreferenceTask"
-          key="/instance/org.eclipse.jdt.ui/semanticHighlighting.inheritedMethodInvocation.enabled"
-          value="true"/>
-      <setupTask
-          xsi:type="setup:PreferenceTask"
-          key="/instance/org.eclipse.jdt.ui/semanticHighlighting.interface.color"
-          value="15,127,136"/>
-      <setupTask
-          xsi:type="setup:PreferenceTask"
-          key="/instance/org.eclipse.jdt.ui/semanticHighlighting.interface.enabled"
-          value="true"/>
-      <setupTask
-          xsi:type="setup:PreferenceTask"
-          key="/instance/org.eclipse.jdt.ui/semanticHighlighting.typeParameter.enabled"
-          value="true"/>
-      <description>Syntax Color for the java source editor</description>
-    </setupTask>
-    <setupTask
-        xsi:type="setup:CompoundTask"
-        name="last_launch_configuration">
-      <setupTask
-          xsi:type="setup:PreferenceTask"
-          key="/instance/org.eclipse.debug.ui/org.eclipse.debug.ui.UseContextualLaunch"
-          value="false"/>
-      <description>Execute always the last run configuration with F11</description>
-    </setupTask>
-    <setupTask
-        xsi:type="setup:CompoundTask"
-        name="save_dirty_editors">
-      <setupTask
-          xsi:type="setup:PreferenceTask"
-          key="/instance/org.eclipse.debug.ui/org.eclipse.debug.ui.save_dirty_editors_before_launch"
-          value="always"/>
-      <setupTask
-          xsi:type="setup:PreferenceTask"
-          key="/instance/org.eclipse.ui.ide/SAVE_ALL_BEFORE_BUILD"
-          value="always">
-        <description></description>
-      </setupTask>
-      <description>Save dirty editors before build and launch run</description>
-    </setupTask>
-    <setupTask
-        xsi:type="setup:CompoundTask"
-        id="quick_diff"
-        name="quick_diff">
-      <setupTask
-          xsi:type="setup:PreferenceTask"
-          key="/instance/org.eclipse.ui.editors/additionIndicationColor"
-          value="128,255,171"/>
-      <setupTask
-          xsi:type="setup:PreferenceTask"
-          key="/instance/org.eclipse.ui.editors/additionIndicationInOverviewRuler"
-          value="true"/>
-      <setupTask
-          xsi:type="setup:PreferenceTask"
-          key="/instance/org.eclipse.ui.editors/changeIndicationColor"
-          value="232,229,2"/>
-      <setupTask
-          xsi:type="setup:PreferenceTask"
-          key="/instance/org.eclipse.ui.editors/changeIndicationInOverviewRuler"
-          value="true"/>
-      <setupTask
-          xsi:type="setup:PreferenceTask"
-          key="/instance/org.eclipse.ui.editors/deletionIndicationColor"
-          value="255,150,169"/>
-      <setupTask
-          xsi:type="setup:PreferenceTask"
-          key="/instance/org.eclipse.ui.editors/deletionIndicationInOverviewRuler"
-          value="true"/>
-      <setupTask
-          xsi:type="setup:PreferenceTask"
-          key="/instance/org.eclipse.ui.editors/quickdiff.defaultProvider"
-          value="org.eclipse.egit.ui.internal.decorators.GitQuickDiffProvider"/>
-      <description>Indicates changes to the last git commit in the quick diff mode</description>
-    </setupTask>
-    <setupTask
-        xsi:type="setup:CompoundTask"
-        id="refresh_workspace_files"
-        name="refresh_workspace_files">
-      <setupTask
-          xsi:type="setup:PreferenceTask"
-          key="/instance/org.eclipse.core.resources/refresh.enabled"
-          value="true"/>
-      <setupTask
-          xsi:type="setup:PreferenceTask"
-          key="/instance/org.eclipse.core.resources/refresh.lightweight.enabled"
-          value="true"/>
-      <setupTask
-          xsi:type="setup:PreferenceTask"
-          key="/instance/org.eclipse.ui.ide/REFRESH_WORKSPACE_ON_STARTUP"
-          value="true"/>
-      <description>Keep the files fresh between the workspace and OS</description>
-    </setupTask>
-    <setupTask
-        xsi:type="setup:CompoundTask"
-        id="hide_text_on_perspective_switcher"
-        name="hide_text_on_perspective_switcher">
-      <setupTask
-          xsi:type="setup:PreferenceTask"
-          key="/instance/org.eclipse.ui/SHOW_TEXT_ON_PERSPECTIVE_BAR"
-          value="false"/>
-      <setupTask
-          xsi:type="setup:PreferenceTask"
-          key="/instance/org.eclipse.ui.workbench/overridepresentation"
-          value="true"/>
-      <description>Hides the perspective switcher text and only shows the corresponding perspective icon</description>
-    </setupTask>
-    <setupTask
-        xsi:type="setup:CompoundTask"
-        id="disable_activate_the_debug_view_when_a_breakpoint_is_hit"
-        name="disable_activate_the_debug_view_when_a_breakpoint_is_hit">
-      <setupTask
-          xsi:type="setup:PreferenceTask"
-          key="/instance/org.eclipse.debug.ui/org.eclipse.debug.ui.activate_debug_view"
-          value="false"/>
-      <description>This prevents eclipse of showing the call stack tree if a break point is hit.</description>
-    </setupTask>
-    <setupTask
-        xsi:type="setup:CompoundTask"
-        id="highlight_matching_brackets"
-        name="highlight_matching_brackets">
-      <setupTask
-          xsi:type="setup:PreferenceTask"
-          key="/instance/org.eclipse.jdt.ui/matchingBracketsColor"
-          value="0,255,0"/>
-      <description>Matching brackets are highlighted</description>
-    </setupTask>
-    <setupTask
-        xsi:type="setup:CompoundTask"
-        name="no_prompt_while_closing_the_last_window">
-      <setupTask
-          xsi:type="setup:PreferenceTask"
-          key="/instance/org.eclipse.ui.ide/EXIT_PROMPT_ON_CLOSE_LAST_WINDOW"
-          value="false"/>
-      <description>Suppress the prompt dialog while closing the last eclipse window (just close the last window)</description>
-    </setupTask>
-    <setupTask
-        xsi:type="setup:CompoundTask"
-        name="no_prompt_while_deleteting_conditional_breakpoints">
-      <setupTask
-          xsi:type="setup:PreferenceTask"
-          key="/instance/org.eclipse.jdt.debug.ui/org.eclipse.jdt.debug.ui.prompt_delete_conditional_breakpoint"
-          value="false"/>
-      <description>No prompt while deleting a conditional breakpoint.</description>
-    </setupTask>
-    <setupTask
-        xsi:type="setup:CompoundTask"
-        id="package_exclusion"
-        name="package_exclusion">
-      <setupTask
-          xsi:type="setup:PreferenceTask"
-          key="/instance/org.eclipse.jdt.ui/org.eclipse.jdt.ui.typefilter.enabled"
-          value="java.awt.*;javax.swing.*;"/>
-      <description>Exclued packages from eclipse enterily like java.awt.* and javax.swing.*</description>
-    </setupTask>
-    <setupTask
-        xsi:type="setup:CompoundTask"
-        id="package_explorer_decorator"
-        name="package_explorer_decorator">
-      <setupTask
-          xsi:type="setup:PreferenceTask"
-          key="/instance/org.eclipse.ui.workbench/ENABLED_DECORATORS"
-          value="org.eclipaint.manager.decorator.icons.folder:true,org.eclipaint.manager..decorator.icons:true,org.eclipse.m2e.core.mavenVersionDecorator:false,com.mountainminds.eclemma.ui.coverageDecorator:false,org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator:true,org.eclipse.jdt.ui.override.decorator:true,org.eclipse.jdt.ui.interface.decorator:true,org.eclipse.jdt.ui.buildpath.decorator:true,org.eclipse.m2e.core.maven2decorator:true,org.eclipse.mylyn.context.ui.decorator.interest:true,org.eclipse.mylyn.tasks.ui.decorators.task:true,org.eclipse.mylyn.team.ui.changeset.decorator:true,org.eclipse.pde.ui.binaryProjectDecorator:false,org.eclipse.ui.LinkedResourceDecorator:true,org.eclipse.ui.SymlinkDecorator:true,org.eclipse.ui.VirtualResourceDecorator:true,org.eclipse.ui.ContentTypeDecorator:true,org.eclipse.ui.ResourceFilterDecorator:false,org.moreunit.testdecorator:true,org.moreunit.core.decorators.testedFileDecorator:true,">
-        <description>Enables the java type decorator e.g. shows an I for interface types</description>
+          key="/instance/org.eclipse.jdt.ui/org.eclipse.jdt.ui.text.custom_templates"
+          value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?>&lt;templates>&lt;template autoinsert=&quot;false&quot; context=&quot;java&quot; deleted=&quot;false&quot; description=&quot;convert collection to array&quot; enabled=&quot;true&quot; id=&quot;org.eclipse.jdt.ui.templates.toarray&quot; name=&quot;toarray&quot;>$${type:elemType(collection)}[] $${name} = ($${type:elemType(collection)}[]) $${collection}.toArray(new $${type}[$${collection}.size()]);&#xD;&#xA;&#x9;&lt;/template>&lt;template autoinsert=&quot;false&quot; context=&quot;java&quot; deleted=&quot;false&quot; description=&quot;runnable&quot; enabled=&quot;true&quot; id=&quot;org.eclipse.jdt.ui.templates.runnable&quot; name=&quot;runnable&quot;>new Runnable() {&#xD;&#xA;    @Override&#xD;&#xA;&#x9;public void run() {&#xD;&#xA;&#x9;&#x9;$${line_selection}&#xD;&#xA;&#x9;}&#xD;&#xA;}&lt;/template>&lt;template autoinsert=&quot;false&quot; context=&quot;java-members&quot; deleted=&quot;false&quot; description=&quot;static final field&quot; enabled=&quot;true&quot; id=&quot;org.eclipse.jdt.ui.templates.static_final&quot; name=&quot;static_final&quot;>$${visibility:link(public,protected,private)} static final $${type} $${NAME} = $${word_selection}${};&lt;/template>&lt;template autoinsert=&quot;true&quot; context=&quot;java-statements&quot; deleted=&quot;false&quot; description=&quot;dynamic cast&quot; enabled=&quot;true&quot; name=&quot;cast selection&quot;>$${type} $${new_name} = ($${type}) $${word_selection}&#xD;&#xA;&#x9;&lt;/template>&lt;template autoinsert=&quot;true&quot; context=&quot;java&quot; deleted=&quot;false&quot; description=&quot;Disables formatting for the selected block enclosed inside formatter tags&quot; enabled=&quot;true&quot; name=&quot;disable formatting&quot;>// @formatter:off&amp;#13;&#xD;&#xA;$${line_selection}$${cursor}&amp;#13;&#xD;&#xA;// @formatter:on&#xD;&#xA;&#x9;&lt;/template>&lt;template autoinsert=&quot;true&quot; context=&quot;java-statements&quot; deleted=&quot;false&quot; description=&quot;iterate over map&quot; enabled=&quot;true&quot; name=&quot;for&quot;>$${:import(java.util.Map.Entry)}&amp;#13;&#xD;&#xA;for(Entry&amp;lt;$${key:argType(map,0)},$${value:argType(map,1)}&amp;gt; entry : $${map:var(java.util.Map)}.entrySet()) {&amp;#13;&#xD;&#xA;&#x9;&#x9;$${key} key = entry.getKey();&amp;#13;&#xD;&#xA;&#x9;&#x9;$${value} value = entry.getValue();&amp;#13;&#xD;&#xA;&#x9;&#x9;$${cursor}&amp;#13;&#xD;&#xA;}&#xD;&#xA;&#x9;&lt;/template>&lt;template autoinsert=&quot;true&quot; context=&quot;java&quot; deleted=&quot;false&quot; description=&quot;create a new array&quot; enabled=&quot;true&quot; name=&quot;new array&quot;>$${type}[] $${name} = new $${type}[$${size}];&lt;/template>&lt;template autoinsert=&quot;true&quot; context=&quot;java-statements&quot; deleted=&quot;false&quot; description=&quot;if not null&quot; enabled=&quot;true&quot; name=&quot;if&quot;>if ($${var} != null){&amp;#13;&#xD;&#xA;    $${cursor}&amp;#13;&#xD;&#xA;}&amp;#13;&#xD;&#xA;&lt;/template>&lt;template autoinsert=&quot;true&quot; context=&quot;java-statements&quot; deleted=&quot;false&quot; description=&quot;if null&quot; enabled=&quot;true&quot; name=&quot;if&quot;>if ($${var} == null){&amp;#13;&#xD;&#xA;&#x9;$${cursor}&amp;#13;&#xD;&#xA;}&amp;#13;&#xD;&#xA;&lt;/template>&lt;template autoinsert=&quot;true&quot; context=&quot;java&quot; deleted=&quot;false&quot; description=&quot;uses the selection as if condition&quot; enabled=&quot;true&quot; name=&quot;if&quot;>if ($${word_selection}){&#xD;&#xA;    $${cursor}&#xD;&#xA;}&#xD;&#xA;&lt;/template>&lt;template autoinsert=&quot;true&quot; context=&quot;java&quot; deleted=&quot;false&quot; description=&quot;Array declaration and initialisation&quot; enabled=&quot;true&quot; name=&quot;init&quot;>$${type}[] $${name} = new $${type}[] {$${cursor}};&lt;/template>&lt;template autoinsert=&quot;true&quot; context=&quot;java&quot; deleted=&quot;false&quot; description=&quot;Declare a list and initialise it using asList()&quot; enabled=&quot;true&quot; name=&quot;init&quot;>$${:import(java.util.List, java.util.Arrays)}&#xD;&#xA;List&amp;lt;$${type}&amp;gt; $${name:newName(java.util.List)} = Arrays.asList($${cursor});&#xD;&#xA;&#x9;&lt;/template>&lt;template autoinsert=&quot;true&quot; context=&quot;java&quot; deleted=&quot;false&quot; description=&quot;Create a new generic LinkedList&quot; enabled=&quot;true&quot; name=&quot;list&quot;>$${:import(java.util.List,java.util.ListList)}&#xD;&#xA;List&amp;lt;$${argType}&amp;gt; $${newName} = new LinkedList&amp;lt;&amp;gt;();&lt;/template>&lt;template autoinsert=&quot;true&quot; context=&quot;java&quot; deleted=&quot;false&quot; description=&quot;Create a new generic ArrayList&quot; enabled=&quot;true&quot; name=&quot;list&quot;>$${:import(java.util.List,java.util.ArrayList)}&#xD;&#xA;List&amp;lt;$${argType}&amp;gt; $${newName} = new ArrayList&amp;lt;&amp;gt;();&lt;/template>&lt;template autoinsert=&quot;true&quot; context=&quot;java&quot; deleted=&quot;false&quot; description=&quot;Create a new generic HashMap&quot; enabled=&quot;true&quot; name=&quot;map&quot;>$${:import(java.util.Map,java.util.HashMap)}&#xD;&#xA;Map&amp;lt;$${argType},$${argType2}&amp;gt; $${index:newName(map)} = new HashMap&amp;lt;&amp;gt;();&lt;/template>&lt;template autoinsert=&quot;true&quot; context=&quot;java-statements&quot; deleted=&quot;false&quot; description=&quot;iterate over lines in file&quot; enabled=&quot;true&quot; name=&quot;readfile&quot;>$${:import(java.nio.file.Files,&amp;#13;&#xD;&#xA;          java.nio.file.Paths,&amp;#13;&#xD;&#xA;          java.nio.charset.Charset,&amp;#13;&#xD;&#xA;          java.io.IOException,&amp;#13;&#xD;&#xA;          java.io.BufferedReader)}&amp;#13;&#xD;&#xA;try (BufferedReader in = Files.newBufferedReader(Paths.get($${fileName:var(String)}),&amp;#13;&#xD;&#xA;                                                 Charset.forName(&quot;UTF-8&quot;))) {&amp;#13;&#xD;&#xA;&#x9;String line = null;&amp;#13;&#xD;&#xA;&#x9;while ((line = in.readLine()) != null) {&amp;#13;&#xD;&#xA;&#x9;&#x9;$${cursor}&amp;#13;&#xD;&#xA;&#x9;}&amp;#13;&#xD;&#xA;} catch (IOException e) {&amp;#13;&#xD;&#xA;    // $${todo}: handle exception&amp;#13;&#xD;&#xA;}&lt;/template>&lt;template autoinsert=&quot;true&quot; context=&quot;java&quot; deleted=&quot;false&quot; description=&quot;HashSet declaration&quot; enabled=&quot;true&quot; name=&quot;set&quot;>$${:import(java.util.Set, java.util.HashSet)}&#xD;&#xA;Set&amp;lt;$${type}&amp;gt; $${name:newName(java.util.Set)} = new HashSet&amp;lt;&amp;gt;();&#xD;&#xA;&#x9;&lt;/template>&lt;template autoinsert=&quot;true&quot; context=&quot;java&quot; deleted=&quot;false&quot; description=&quot;format string with apostrophe&quot; enabled=&quot;true&quot; name=&quot;strf&quot;>String.format(&quot;$${word_selection}${}&quot;,$${var}$${cursor})&#xD;&#xA;&#x9;&lt;/template>&lt;template autoinsert=&quot;true&quot; context=&quot;java&quot; deleted=&quot;false&quot; description=&quot;format string without apostrophe&quot; enabled=&quot;true&quot; name=&quot;strf&quot;>String.format($${word_selection}${},$${var}$${cursor})&#xD;&#xA;&#x9;&lt;/template>&lt;template autoinsert=&quot;true&quot; context=&quot;java-statements&quot; deleted=&quot;false&quot; description=&quot;write text to a file&quot; enabled=&quot;true&quot; name=&quot;writefile&quot;>$${:import(java.nio.file.Files,&amp;#13;&#xD;&#xA;          java.nio.file.Paths,&amp;#13;&#xD;&#xA;          java.nio.charset.Charset,&amp;#13;&#xD;&#xA;          java.io.IOException,&amp;#13;&#xD;&#xA;          java.io.BufferedWriter)}&amp;#13;&#xD;&#xA;try (BufferedWriter out = Files.newBufferedWriter(Paths.get($${fileName:var(String)}),&amp;#13;&#xD;&#xA;                                                  Charset.forName(&quot;UTF-8&quot;))) {&amp;#13;&#xD;&#xA;    out.write($${string:var(String)});&amp;#13;&#xD;&#xA;    out.newLine();&amp;#13;&#xD;&#xA;    $${cursor}&amp;#13;&#xD;&#xA;} catch (IOException e) {&amp;#13;&#xD;&#xA;    // $${todo}: handle exception&amp;#13;&#xD;&#xA;}&amp;#13;&#xD;&#xA;&lt;/template>&lt;template autoinsert=&quot;true&quot; context=&quot;java&quot; deleted=&quot;false&quot; description=&quot;Inject IEclipseContext&quot; enabled=&quot;true&quot; name=&quot;inject - Eclipse Context&quot;>@Inject&#xD;&#xA;private IEclipseContext context;&#xD;&#xA;$${imp:import(javax.inject.Inject,org.eclipse.e4.core.contexts.IEclipseContext)}&lt;/template>&lt;template autoinsert=&quot;true&quot; context=&quot;java&quot; deleted=&quot;false&quot; description=&quot;Inject UISynchronize&quot; enabled=&quot;true&quot; name=&quot;Inject - UI Synchronize&quot;>@Inject&#xD;&#xA;private UISynchronize uiSynchronize;&#xD;&#xA;$${imp:import(javax.inject.Inject,org.eclipse.e4.ui.di.UISynchronize)}&lt;/template>&lt;template autoinsert=&quot;true&quot; context=&quot;java&quot; deleted=&quot;false&quot; description=&quot;Inject the given type&quot; enabled=&quot;true&quot; name=&quot;Inject - Type&quot;>@Inject&#xD;&#xA;private $${type} $${name};&#xD;&#xA;$${imp:import(javax.inject.Inject)}&lt;/template>&lt;template autoinsert=&quot;true&quot; context=&quot;java&quot; deleted=&quot;false&quot; description=&quot;Create a new generic Treemap&quot; enabled=&quot;true&quot; name=&quot;tree map&quot;>$${:import(java.util.SortedMap,java.util.TreeMap)}&#xD;&#xA;SortedMap&amp;lt;$${argType},$${argType2}&amp;gt; $${index:newName(map)} = new TreeMap&amp;lt;&amp;gt;();&lt;/template>&lt;/templates>">
+        <description>Java source code templates for String.format and so on ...</description>
       </setupTask>
     </setupTask>
     <setupTask
         xsi:type="setup:CompoundTask"
-        id=""
-        name="package_explorer_filter">
-      <setupTask
-          xsi:type="setup:PreferenceTask"
-          key="/instance/org.eclipse.jdt.ui/org.eclipse.jdt.internal.ui.PackageExplorer.EmptyInnerPackageFilter"
-          value="true"/>
-      <setupTask
-          xsi:type="setup:PreferenceTask"
-          key="/instance/org.eclipse.jdt.ui/org.eclipse.jdt.internal.ui.PackageExplorer.HideInnerClassFilesFilter"
-          value="true"/>
-      <setupTask
-          xsi:type="setup:PreferenceTask"
-          key="/instance/org.eclipse.jdt.ui/org.eclipse.jdt.ui.PackageExplorer.ContainedLibraryFilter"
-          value="true"/>
-      <setupTask
-          xsi:type="setup:PreferenceTask"
-          key="/instance/org.eclipse.jdt.ui/org.eclipse.jdt.ui.PackageExplorer.EmptyLibraryContainerFilter"
-          value="true"/>
-      <setupTask
-          xsi:type="setup:PreferenceTask"
-          key="/instance/org.eclipse.jdt.ui/org.eclipse.jdt.ui.PackageExplorer.FieldsFilter"
-          value="true"/>
-      <setupTask
-          xsi:type="setup:PreferenceTask"
-          key="/instance/org.eclipse.jdt.ui/org.eclipse.jdt.ui.PackageExplorer.ImportDeclarationFilter"
-          value="true"/>
-      <setupTask
-          xsi:type="setup:PreferenceTask"
-          key="/instance/org.eclipse.jdt.ui/org.eclipse.jdt.ui.PackageExplorer.LibraryFilter"
-          value="true"/>
-      <setupTask
-          xsi:type="setup:PreferenceTask"
-          key="/instance/org.eclipse.jdt.ui/org.eclipse.jdt.ui.PackageExplorer.PackageDeclarationFilter"
-          value="true"/>
-      <setupTask
-          xsi:type="setup:PreferenceTask"
-          key="/instance/org.eclipse.jdt.ui/org.eclipse.jdt.ui.PackageExplorer.SyntheticMembersFilter"
-          value="true"/>
-      <setupTask
-          xsi:type="setup:PreferenceTask"
-          key="/instance/org.eclipse.jdt.ui/org.eclipse.jdt.ui.PackageExplorer_patternFilterId_.*"
-          value="true"/>
-      <setupTask
-          xsi:type="setup:PreferenceTask"
-          key="/instance/org.eclipse.jdt.ui/org.eclipse.mylyn.java.ui.MembersFilter"
-          value="true"/>
-      <setupTask
-          xsi:type="setup:PreferenceTask"
-          key="/instance/org.eclipse.jdt.ui/org.eclipse.pde.ui.ExternalPluginLibrariesFilter1"
-          value="true"/>
-      <description>Package explorer filter</description>
-    </setupTask>
-    <setupTask
-        xsi:type="setup:CompoundTask"
-        id="pde_folding"
-        name="pde_folding">
-      <setupTask
-          xsi:type="setup:PreferenceTask"
-          key="/instance/org.eclipse.pde.ui/editor.folding"
-          value="true"/>
-      <description>Enables the folding for the PDE editor (Plug-in Development -> Editors)</description>
-    </setupTask>
-    <setupTask
-        xsi:type="setup:CompoundTask"
-        id="remove_noisy_comments_from_code_templates"
-        name="remove_noisy_comments_from_code_templates">
-      <setupTask
-          xsi:type="setup:PreferenceTask"
-          key="/instance/org.eclipse.jdt.ui/org.eclipse.jdt.ui.text.custom_code_templates"
-          value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?>&lt;templates>&lt;template autoinsert=&quot;false&quot; context=&quot;catchblock_context&quot; deleted=&quot;false&quot; description=&quot;Code in new catch blocks&quot; enabled=&quot;true&quot; id=&quot;org.eclipse.jdt.ui.text.codetemplates.catchblock&quot; name=&quot;catchblock&quot;>$${exception_var}.printStackTrace();&lt;/template>&lt;template autoinsert=&quot;false&quot; context=&quot;methodbody_context&quot; deleted=&quot;false&quot; description=&quot;Code in created method stubs&quot; enabled=&quot;true&quot; id=&quot;org.eclipse.jdt.ui.text.codetemplates.methodbody&quot; name=&quot;methodbody&quot;>$${body_statement}&lt;/template>&lt;template autoinsert=&quot;false&quot; context=&quot;constructorbody_context&quot; deleted=&quot;false&quot; description=&quot;Code in created constructor stubs&quot; enabled=&quot;true&quot; id=&quot;org.eclipse.jdt.ui.text.codetemplates.constructorbody&quot; name=&quot;constructorbody&quot;>$${body_statement}&lt;/template>&lt;/templates>"/>
-      <description>Remove noisy todo comments like '// TODO Auto-generated method stub' and '// TODO Auto-generated catch block' from code templates</description>
-    </setupTask>
-    <setupTask
-        xsi:type="setup:CompoundTask"
-        name="run_in_background">
-      <setupTask
-          xsi:type="setup:PreferenceTask"
-          key="/instance/org.eclipse.ui.workbench/RUN_IN_BACKGROUND"
-          value="true">
-        <description>Tasks are always executed in background</description>
-      </setupTask>
-      <description>Run task always in the background</description>
-    </setupTask>
-    <setupTask
-        xsi:type="setup:CompoundTask"
-        name="show_heap_status">
-      <setupTask
-          xsi:type="setup:PreferenceTask"
-          key="/instance/org.eclipse.ui/SHOW_MEMORY_MONITOR"
-          value="true">
-        <description>Displays the heap status in the status bar.</description>
-      </setupTask>
-      <description>Displays the heap status in the status bar.</description>
-    </setupTask>
-    <setupTask
-        xsi:type="setup:CompoundTask"
-        id="show_line_numbers"
-        name="show_line_numbers">
-      <setupTask
-          xsi:type="setup:PreferenceTask"
-          key="/instance/org.eclipse.ui.editors/lineNumberRuler"
-          value="true">
-        <description>Shows the line numbers in the source editor</description>
-      </setupTask>
-      <description>Shows the line numbers in the source editor </description>
-    </setupTask>
-    <setupTask
-        xsi:type="setup:CompoundTask"
-        name="step_filters">
-      <setupTask
-          xsi:type="setup:PreferenceTask"
-          key="/instance/org.eclipse.debug.core/org.eclipse.debug.core.USE_STEP_FILTERS"
-          value="true"/>
-      <setupTask
-          xsi:type="setup:PreferenceTask"
-          key="/instance/org.eclipse.jdt.debug.ui/org.eclipse.jdt.debug.ui.active_filters"
-          value="com.google.*,com.ibm.*,com.sun.*,java.*,javax.*,jrockit.*,org.apache.*,org.eclipse.*,org.hibernate.*,org.omg.*,org.osgi.*,sun.*,sunw.*,java.lang.ClassLoader"/>
-      <setupTask
-          xsi:type="setup:PreferenceTask"
-          key="/instance/org.eclipse.jdt.debug.ui/org.eclipse.jdt.debug.ui.inactive_filters"
-          value=""/>
-      <description>Excludes packages like java.* and javax.* from the debugging process</description>
-    </setupTask>
-    <setupTask
-        xsi:type="setup:CompoundTask"
-        id="unlimit_local_history"
-        name="unlimit_local_history">
-      <setupTask
-          xsi:type="setup:PreferenceTask"
-          key="/instance/org.eclipse.core.resources/description.applyfilestatepolicy"
-          value="false">
-        <description>Discards the limit of the local history</description>
-      </setupTask>
-      <description>Discards the limit of the local history</description>
-    </setupTask>
-    <setupTask
-        xsi:type="setup:CompoundTask"
-        id="compiler_settings"
         name="compiler_settings">
       <setupTask
           xsi:type="setup:PreferenceTask"
@@ -766,33 +402,6 @@
     </setupTask>
     <setupTask
         xsi:type="setup:CompoundTask"
-        id="workspace_encoding_and_line_ending"
-        name="workspace_encoding_and_line_ending">
-      <setupTask
-          xsi:type="setup:PreferenceTask"
-          key="/instance/org.eclipse.core.resources/encoding"
-          value="UTF-8">
-        <description>Set the workspace encoding so it works well in different OS</description>
-      </setupTask>
-      <setupTask
-          xsi:type="setup:PreferenceTask"
-          key="/instance/org.eclipse.core.runtime/line.separator"
-          value="&#xD;&#xA;"/>
-      <description>Sets the workspace encoding to UTF-8 and Windows line ending (\n\r)</description>
-    </setupTask>
-    <setupTask
-        xsi:type="setup:CompoundTask"
-        name="code_templates">
-      <setupTask
-          xsi:type="setup:PreferenceTask"
-          key="/instance/org.eclipse.jdt.ui/org.eclipse.jdt.ui.text.custom_templates"
-          value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?>&lt;templates>&lt;template autoinsert=&quot;false&quot; context=&quot;java&quot; deleted=&quot;false&quot; description=&quot;convert collection to array&quot; enabled=&quot;true&quot; id=&quot;org.eclipse.jdt.ui.templates.toarray&quot; name=&quot;toarray&quot;>$${type:elemType(collection)}[] $${name} = ($${type:elemType(collection)}[]) $${collection}.toArray(new $${type}[$${collection}.size()]);&#xD;&#xA;&#x9;&lt;/template>&lt;template autoinsert=&quot;false&quot; context=&quot;java&quot; deleted=&quot;false&quot; description=&quot;runnable&quot; enabled=&quot;true&quot; id=&quot;org.eclipse.jdt.ui.templates.runnable&quot; name=&quot;runnable&quot;>new Runnable() {&#xD;&#xA;    @Override&#xD;&#xA;&#x9;public void run() {&#xD;&#xA;&#x9;&#x9;$${line_selection}&#xD;&#xA;&#x9;}&#xD;&#xA;}&lt;/template>&lt;template autoinsert=&quot;false&quot; context=&quot;java-members&quot; deleted=&quot;false&quot; description=&quot;static final field&quot; enabled=&quot;true&quot; id=&quot;org.eclipse.jdt.ui.templates.static_final&quot; name=&quot;static_final&quot;>$${visibility:link(public,protected,private)} static final $${type} $${NAME} = $${word_selection}${};&lt;/template>&lt;template autoinsert=&quot;true&quot; context=&quot;java-statements&quot; deleted=&quot;false&quot; description=&quot;dynamic cast&quot; enabled=&quot;true&quot; name=&quot;cast selection&quot;>$${type} $${new_name} = ($${type}) $${word_selection}&#xD;&#xA;&#x9;&lt;/template>&lt;template autoinsert=&quot;true&quot; context=&quot;java&quot; deleted=&quot;false&quot; description=&quot;Disables formatting for the selected block enclosed inside formatter tags&quot; enabled=&quot;true&quot; name=&quot;disable formatting&quot;>// @formatter:off&amp;#13;&#xD;&#xA;$${line_selection}$${cursor}&amp;#13;&#xD;&#xA;// @formatter:on&#xD;&#xA;&#x9;&lt;/template>&lt;template autoinsert=&quot;true&quot; context=&quot;java-statements&quot; deleted=&quot;false&quot; description=&quot;iterate over map&quot; enabled=&quot;true&quot; name=&quot;for&quot;>$${:import(java.util.Map.Entry)}&amp;#13;&#xD;&#xA;for(Entry&amp;lt;$${key:argType(map,0)},$${value:argType(map,1)}&amp;gt; entry : $${map:var(java.util.Map)}.entrySet()) {&amp;#13;&#xD;&#xA;&#x9;&#x9;$${key} key = entry.getKey();&amp;#13;&#xD;&#xA;&#x9;&#x9;$${value} value = entry.getValue();&amp;#13;&#xD;&#xA;&#x9;&#x9;$${cursor}&amp;#13;&#xD;&#xA;}&#xD;&#xA;&#x9;&lt;/template>&lt;template autoinsert=&quot;true&quot; context=&quot;java&quot; deleted=&quot;false&quot; description=&quot;create a new array&quot; enabled=&quot;true&quot; name=&quot;new array&quot;>$${type}[] $${name} = new $${type}[$${size}];&lt;/template>&lt;template autoinsert=&quot;true&quot; context=&quot;java-statements&quot; deleted=&quot;false&quot; description=&quot;if not null&quot; enabled=&quot;true&quot; name=&quot;if&quot;>if ($${var} != null){&amp;#13;&#xD;&#xA;    $${cursor}&amp;#13;&#xD;&#xA;}&amp;#13;&#xD;&#xA;&lt;/template>&lt;template autoinsert=&quot;true&quot; context=&quot;java-statements&quot; deleted=&quot;false&quot; description=&quot;if null&quot; enabled=&quot;true&quot; name=&quot;if&quot;>if ($${var} == null){&amp;#13;&#xD;&#xA;&#x9;$${cursor}&amp;#13;&#xD;&#xA;}&amp;#13;&#xD;&#xA;&lt;/template>&lt;template autoinsert=&quot;true&quot; context=&quot;java&quot; deleted=&quot;false&quot; description=&quot;uses the selection as if condition&quot; enabled=&quot;true&quot; name=&quot;if&quot;>if ($${word_selection}){&#xD;&#xA;    $${cursor}&#xD;&#xA;}&#xD;&#xA;&lt;/template>&lt;template autoinsert=&quot;true&quot; context=&quot;java&quot; deleted=&quot;false&quot; description=&quot;Array declaration and initialisation&quot; enabled=&quot;true&quot; name=&quot;init&quot;>$${type}[] $${name} = new $${type}[] {$${cursor}};&lt;/template>&lt;template autoinsert=&quot;true&quot; context=&quot;java&quot; deleted=&quot;false&quot; description=&quot;Declare a list and initialise it using asList()&quot; enabled=&quot;true&quot; name=&quot;init&quot;>$${:import(java.util.List, java.util.Arrays)}&#xD;&#xA;List&amp;lt;$${type}&amp;gt; $${name:newName(java.util.List)} = Arrays.asList($${cursor});&#xD;&#xA;&#x9;&lt;/template>&lt;template autoinsert=&quot;true&quot; context=&quot;java&quot; deleted=&quot;false&quot; description=&quot;Create a new generic LinkedList&quot; enabled=&quot;true&quot; name=&quot;list&quot;>$${:import(java.util.List,java.util.ListList)}&#xD;&#xA;List&amp;lt;$${argType}&amp;gt; $${newName} = new LinkedList&amp;lt;&amp;gt;();&lt;/template>&lt;template autoinsert=&quot;true&quot; context=&quot;java&quot; deleted=&quot;false&quot; description=&quot;Create a new generic ArrayList&quot; enabled=&quot;true&quot; name=&quot;list&quot;>$${:import(java.util.List,java.util.ArrayList)}&#xD;&#xA;List&amp;lt;$${argType}&amp;gt; $${newName} = new ArrayList&amp;lt;&amp;gt;();&lt;/template>&lt;template autoinsert=&quot;true&quot; context=&quot;java&quot; deleted=&quot;false&quot; description=&quot;Create a new generic HashMap&quot; enabled=&quot;true&quot; name=&quot;map&quot;>$${:import(java.util.Map,java.util.HashMap)}&#xD;&#xA;Map&amp;lt;$${argType},$${argType2}&amp;gt; $${index:newName(map)} = new HashMap&amp;lt;&amp;gt;();&lt;/template>&lt;template autoinsert=&quot;true&quot; context=&quot;java-statements&quot; deleted=&quot;false&quot; description=&quot;iterate over lines in file&quot; enabled=&quot;true&quot; name=&quot;readfile&quot;>$${:import(java.nio.file.Files,&amp;#13;&#xD;&#xA;          java.nio.file.Paths,&amp;#13;&#xD;&#xA;          java.nio.charset.Charset,&amp;#13;&#xD;&#xA;          java.io.IOException,&amp;#13;&#xD;&#xA;          java.io.BufferedReader)}&amp;#13;&#xD;&#xA;try (BufferedReader in = Files.newBufferedReader(Paths.get($${fileName:var(String)}),&amp;#13;&#xD;&#xA;                                                 Charset.forName(&quot;UTF-8&quot;))) {&amp;#13;&#xD;&#xA;&#x9;String line = null;&amp;#13;&#xD;&#xA;&#x9;while ((line = in.readLine()) != null) {&amp;#13;&#xD;&#xA;&#x9;&#x9;$${cursor}&amp;#13;&#xD;&#xA;&#x9;}&amp;#13;&#xD;&#xA;} catch (IOException e) {&amp;#13;&#xD;&#xA;    // $${todo}: handle exception&amp;#13;&#xD;&#xA;}&lt;/template>&lt;template autoinsert=&quot;true&quot; context=&quot;java&quot; deleted=&quot;false&quot; description=&quot;HashSet declaration&quot; enabled=&quot;true&quot; name=&quot;set&quot;>$${:import(java.util.Set, java.util.HashSet)}&#xD;&#xA;Set&amp;lt;$${type}&amp;gt; $${name:newName(java.util.Set)} = new HashSet&amp;lt;&amp;gt;();&#xD;&#xA;&#x9;&lt;/template>&lt;template autoinsert=&quot;true&quot; context=&quot;java&quot; deleted=&quot;false&quot; description=&quot;format string with apostrophe&quot; enabled=&quot;true&quot; name=&quot;strf&quot;>String.format(&quot;$${word_selection}${}&quot;,$${var}$${cursor})&#xD;&#xA;&#x9;&lt;/template>&lt;template autoinsert=&quot;true&quot; context=&quot;java&quot; deleted=&quot;false&quot; description=&quot;format string without apostrophe&quot; enabled=&quot;true&quot; name=&quot;strf&quot;>String.format($${word_selection}${},$${var}$${cursor})&#xD;&#xA;&#x9;&lt;/template>&lt;template autoinsert=&quot;true&quot; context=&quot;java-statements&quot; deleted=&quot;false&quot; description=&quot;write text to a file&quot; enabled=&quot;true&quot; name=&quot;writefile&quot;>$${:import(java.nio.file.Files,&amp;#13;&#xD;&#xA;          java.nio.file.Paths,&amp;#13;&#xD;&#xA;          java.nio.charset.Charset,&amp;#13;&#xD;&#xA;          java.io.IOException,&amp;#13;&#xD;&#xA;          java.io.BufferedWriter)}&amp;#13;&#xD;&#xA;try (BufferedWriter out = Files.newBufferedWriter(Paths.get($${fileName:var(String)}),&amp;#13;&#xD;&#xA;                                                  Charset.forName(&quot;UTF-8&quot;))) {&amp;#13;&#xD;&#xA;    out.write($${string:var(String)});&amp;#13;&#xD;&#xA;    out.newLine();&amp;#13;&#xD;&#xA;    $${cursor}&amp;#13;&#xD;&#xA;} catch (IOException e) {&amp;#13;&#xD;&#xA;    // $${todo}: handle exception&amp;#13;&#xD;&#xA;}&amp;#13;&#xD;&#xA;&lt;/template>&lt;template autoinsert=&quot;true&quot; context=&quot;java&quot; deleted=&quot;false&quot; description=&quot;Inject IEclipseContext&quot; enabled=&quot;true&quot; name=&quot;inject - Eclipse Context&quot;>@Inject&#xD;&#xA;private IEclipseContext context;&#xD;&#xA;$${imp:import(javax.inject.Inject,org.eclipse.e4.core.contexts.IEclipseContext)}&lt;/template>&lt;template autoinsert=&quot;true&quot; context=&quot;java&quot; deleted=&quot;false&quot; description=&quot;Inject UISynchronize&quot; enabled=&quot;true&quot; name=&quot;Inject - UI Synchronize&quot;>@Inject&#xD;&#xA;private UISynchronize uiSynchronize;&#xD;&#xA;$${imp:import(javax.inject.Inject,org.eclipse.e4.ui.di.UISynchronize)}&lt;/template>&lt;template autoinsert=&quot;true&quot; context=&quot;java&quot; deleted=&quot;false&quot; description=&quot;Inject the given type&quot; enabled=&quot;true&quot; name=&quot;Inject - Type&quot;>@Inject&#xD;&#xA;private $${type} $${name};&#xD;&#xA;$${imp:import(javax.inject.Inject)}&lt;/template>&lt;template autoinsert=&quot;true&quot; context=&quot;java&quot; deleted=&quot;false&quot; description=&quot;Create a new generic Treemap&quot; enabled=&quot;true&quot; name=&quot;tree map&quot;>$${:import(java.util.SortedMap,java.util.TreeMap)}&#xD;&#xA;SortedMap&amp;lt;$${argType},$${argType2}&amp;gt; $${index:newName(map)} = new TreeMap&amp;lt;&amp;gt;();&lt;/template>&lt;/templates>">
-        <description>Java source code templates for String.format and so on ...</description>
-      </setupTask>
-    </setupTask>
-    <setupTask
-        xsi:type="setup:CompoundTask"
-        id="detail_formatters"
         name="detail_formatters">
       <setupTask
           xsi:type="setup:ResourceCreationTask"
@@ -800,6 +409,250 @@
           targetURL="${workspace.location|uri}/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.debug.ui.prefs"
           encoding="UTF-8"/>
       <description>Detail formater for Maps, Collections and Calendar in the eclipse debugger</description>
+    </setupTask>
+    <setupTask
+        xsi:type="setup:CompoundTask"
+        name="disable_activate_the_debug_view_when_a_breakpoint_is_hit">
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.debug.ui/org.eclipse.debug.ui.activate_debug_view"
+          value="false"/>
+      <description>This prevents eclipse of showing the call stack tree if a break point is hit.</description>
+    </setupTask>
+    <setupTask
+        xsi:type="setup:CompoundTask"
+        name="discard_console_limit">
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.debug.ui/Console.limitConsoleOutput"
+          value="false"/>
+      <description>Discards the limit of visible lines in the console view</description>
+    </setupTask>
+    <setupTask
+        xsi:type="setup:CompoundTask"
+        name="hide_text_on_perspective_switcher">
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.ui/SHOW_TEXT_ON_PERSPECTIVE_BAR"
+          value="false"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.ui.workbench/overridepresentation"
+          value="true"/>
+      <description>Hides the perspective switcher text and only shows the corresponding perspective icon</description>
+    </setupTask>
+    <setupTask
+        xsi:type="setup:CompoundTask"
+        name="highlight_matching_brackets">
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.jdt.ui/matchingBracketsColor"
+          value="0,255,0"/>
+      <description>Matching brackets are highlighted</description>
+    </setupTask>
+    <setupTask
+        xsi:type="setup:CompoundTask"
+        name="no_prompt_while_closing_the_last_window">
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.ui.ide/EXIT_PROMPT_ON_CLOSE_LAST_WINDOW"
+          value="false"/>
+      <description>Suppress the prompt dialog while closing the last eclipse window (just close the last window)</description>
+    </setupTask>
+    <setupTask
+        xsi:type="setup:CompoundTask"
+        name="no_prompt_while_deleteting_conditional_breakpoints">
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.jdt.debug.ui/org.eclipse.jdt.debug.ui.prompt_delete_conditional_breakpoint"
+          value="false"/>
+      <description>No prompt while deleting a conditional breakpoint.</description>
+    </setupTask>
+    <setupTask
+        xsi:type="setup:CompoundTask"
+        name="package_exclusion">
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.jdt.ui/org.eclipse.jdt.ui.typefilter.enabled"
+          value="java.awt.*;javax.swing.*;"/>
+      <description>Exclued packages from eclipse enterily like java.awt.* and javax.swing.*</description>
+    </setupTask>
+    <setupTask
+        xsi:type="setup:CompoundTask"
+        name="package_explorer_decorator">
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.ui.workbench/ENABLED_DECORATORS"
+          value="org.eclipaint.manager.decorator.icons.folder:true,org.eclipaint.manager..decorator.icons:true,org.eclipse.m2e.core.mavenVersionDecorator:false,com.mountainminds.eclemma.ui.coverageDecorator:false,org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator:true,org.eclipse.jdt.ui.override.decorator:true,org.eclipse.jdt.ui.interface.decorator:true,org.eclipse.jdt.ui.buildpath.decorator:true,org.eclipse.m2e.core.maven2decorator:true,org.eclipse.mylyn.context.ui.decorator.interest:true,org.eclipse.mylyn.tasks.ui.decorators.task:true,org.eclipse.mylyn.team.ui.changeset.decorator:true,org.eclipse.pde.ui.binaryProjectDecorator:false,org.eclipse.ui.LinkedResourceDecorator:true,org.eclipse.ui.SymlinkDecorator:true,org.eclipse.ui.VirtualResourceDecorator:true,org.eclipse.ui.ContentTypeDecorator:true,org.eclipse.ui.ResourceFilterDecorator:false,org.moreunit.testdecorator:true,org.moreunit.core.decorators.testedFileDecorator:true,">
+        <description>Enables the java type decorator e.g. shows an I for interface types</description>
+      </setupTask>
+    </setupTask>
+    <setupTask
+        xsi:type="setup:CompoundTask"
+        name="package_explorer_filter">
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.jdt.ui/org.eclipse.jdt.internal.ui.PackageExplorer.EmptyInnerPackageFilter"
+          value="true"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.jdt.ui/org.eclipse.jdt.internal.ui.PackageExplorer.HideInnerClassFilesFilter"
+          value="true"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.jdt.ui/org.eclipse.jdt.ui.PackageExplorer.ContainedLibraryFilter"
+          value="true"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.jdt.ui/org.eclipse.jdt.ui.PackageExplorer.EmptyLibraryContainerFilter"
+          value="true"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.jdt.ui/org.eclipse.jdt.ui.PackageExplorer.FieldsFilter"
+          value="true"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.jdt.ui/org.eclipse.jdt.ui.PackageExplorer.ImportDeclarationFilter"
+          value="true"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.jdt.ui/org.eclipse.jdt.ui.PackageExplorer.LibraryFilter"
+          value="true"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.jdt.ui/org.eclipse.jdt.ui.PackageExplorer.PackageDeclarationFilter"
+          value="true"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.jdt.ui/org.eclipse.jdt.ui.PackageExplorer.SyntheticMembersFilter"
+          value="true"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.jdt.ui/org.eclipse.jdt.ui.PackageExplorer_patternFilterId_.*"
+          value="true"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.jdt.ui/org.eclipse.mylyn.java.ui.MembersFilter"
+          value="true"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.jdt.ui/org.eclipse.pde.ui.ExternalPluginLibrariesFilter1"
+          value="true"/>
+      <description>Package explorer filter</description>
+    </setupTask>
+    <setupTask
+        xsi:type="setup:CompoundTask"
+        name="pde_folding">
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.pde.ui/editor.folding"
+          value="true"/>
+      <description>Enables the folding for the PDE editor (Plug-in Development -> Editors)</description>
+    </setupTask>
+    <setupTask
+        xsi:type="setup:CompoundTask"
+        name="quick_diff">
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.ui.editors/additionIndicationColor"
+          value="128,255,171"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.ui.editors/additionIndicationInOverviewRuler"
+          value="true"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.ui.editors/changeIndicationColor"
+          value="232,229,2"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.ui.editors/changeIndicationInOverviewRuler"
+          value="true"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.ui.editors/deletionIndicationColor"
+          value="255,150,169"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.ui.editors/deletionIndicationInOverviewRuler"
+          value="true"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.ui.editors/quickdiff.defaultProvider"
+          value="org.eclipse.egit.ui.internal.decorators.GitQuickDiffProvider"/>
+      <description>Indicates changes to the last git commit in the quick diff mode</description>
+    </setupTask>
+    <setupTask
+        xsi:type="setup:CompoundTask"
+        name="refresh_workspace_files">
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.core.resources/refresh.enabled"
+          value="true"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.core.resources/refresh.lightweight.enabled"
+          value="true"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.ui.ide/REFRESH_WORKSPACE_ON_STARTUP"
+          value="true"/>
+      <description>Keep the files fresh between the workspace and OS</description>
+    </setupTask>
+    <setupTask
+        xsi:type="setup:CompoundTask"
+        name="remove_noisy_comments_from_code_templates">
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.jdt.ui/org.eclipse.jdt.ui.text.custom_code_templates"
+          value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?>&lt;templates>&lt;template autoinsert=&quot;false&quot; context=&quot;catchblock_context&quot; deleted=&quot;false&quot; description=&quot;Code in new catch blocks&quot; enabled=&quot;true&quot; id=&quot;org.eclipse.jdt.ui.text.codetemplates.catchblock&quot; name=&quot;catchblock&quot;>$${exception_var}.printStackTrace();&lt;/template>&lt;template autoinsert=&quot;false&quot; context=&quot;methodbody_context&quot; deleted=&quot;false&quot; description=&quot;Code in created method stubs&quot; enabled=&quot;true&quot; id=&quot;org.eclipse.jdt.ui.text.codetemplates.methodbody&quot; name=&quot;methodbody&quot;>$${body_statement}&lt;/template>&lt;template autoinsert=&quot;false&quot; context=&quot;constructorbody_context&quot; deleted=&quot;false&quot; description=&quot;Code in created constructor stubs&quot; enabled=&quot;true&quot; id=&quot;org.eclipse.jdt.ui.text.codetemplates.constructorbody&quot; name=&quot;constructorbody&quot;>$${body_statement}&lt;/template>&lt;/templates>"/>
+      <description>Remove noisy todo comments like '// TODO Auto-generated method stub' and '// TODO Auto-generated catch block' from code templates</description>
+    </setupTask>
+    <setupTask
+        xsi:type="setup:CompoundTask"
+        name="rename_in_dialog">
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.jdt.ui/Refactor.lightweight"
+          value="false"/>
+      <description>Disables the in-place renaming, instead the rename dialog is shown that selects the whole expression</description>
+    </setupTask>
+    <setupTask
+        xsi:type="setup:CompoundTask"
+        name="run_in_background">
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.ui.workbench/RUN_IN_BACKGROUND"
+          value="true">
+        <description>Tasks are always executed in background</description>
+      </setupTask>
+      <description>Run task always in the background</description>
+    </setupTask>
+    <setupTask
+        xsi:type="setup:CompoundTask"
+        name="save_dirty_editors">
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.debug.ui/org.eclipse.debug.ui.save_dirty_editors_before_launch"
+          value="always"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.ui.ide/SAVE_ALL_BEFORE_BUILD"
+          value="always">
+        <description></description>
+      </setupTask>
+      <description>Save dirty editors before build and launch run</description>
+    </setupTask>
+    <setupTask
+        xsi:type="setup:CompoundTask"
+        name="show_heap_status">
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.ui/SHOW_MEMORY_MONITOR"
+          value="true">
+        <description>Displays the heap status in the status bar.</description>
+      </setupTask>
+      <description>Displays the heap status in the status bar.</description>
     </setupTask>
     <setupTask
         xsi:type="setup:CompoundTask"
@@ -816,27 +669,157 @@
     </setupTask>
     <setupTask
         xsi:type="setup:CompoundTask"
-        name="workspace_name">
+        name="show_line_numbers">
       <setupTask
           xsi:type="setup:PreferenceTask"
-          key="/instance/org.eclipse.ui.ide/WORKSPACE_NAME"
-          value="${workspace.location|basePath|lastSegment|upper}"/>
-      <description>Sets the workspace name (helps to differentiate between multiple opened eclipse instances)</description>
+          key="/instance/org.eclipse.ui.editors/lineNumberRuler"
+          value="true">
+        <description>Shows the line numbers in the source editor</description>
+      </setupTask>
+      <description>Shows the line numbers in the source editor </description>
     </setupTask>
     <setupTask
         xsi:type="setup:CompoundTask"
-        id="static_imports"
+        name="smart_insert">
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.jdt.ui/escapeStrings"
+          value="true"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.jdt.ui/smart_opening_brace"
+          value="true"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.jdt.ui/smart_semicolon"
+          value="true"/>
+      <description>Smart insert for { and ;</description>
+    </setupTask>
+    <setupTask
+        xsi:type="setup:CompoundTask"
         name="static_imports">
       <setupTask
           xsi:type="setup:PreferenceTask"
           key="/instance/org.eclipse.jdt.ui/content_assist_favorite_static_members"
           value="org.assertj.core.api.Assertions.*;org.mockito.BDDMockito.*"/>
     </setupTask>
+    <setupTask
+        xsi:type="setup:CompoundTask"
+        name="step_filters">
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.debug.core/org.eclipse.debug.core.USE_STEP_FILTERS"
+          value="true"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.jdt.debug.ui/org.eclipse.jdt.debug.ui.active_filters"
+          value="com.google.*,com.ibm.*,com.sun.*,java.*,javax.*,jrockit.*,org.apache.*,org.eclipse.*,org.hibernate.*,org.omg.*,org.osgi.*,sun.*,sunw.*,java.lang.ClassLoader"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.jdt.debug.ui/org.eclipse.jdt.debug.ui.inactive_filters"
+          value=""/>
+      <description>Excludes packages like java.* and javax.* from the debugging process</description>
+    </setupTask>
+    <setupTask
+        xsi:type="setup:CompoundTask"
+        name="syntax_color">
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.jdt.ui/java_keyword_return_underline"
+          value="true"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.jdt.ui/semanticHighlighting.abstractClass.enabled"
+          value="true"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.jdt.ui/semanticHighlighting.abstractMethodInvocation.color"
+          value="139,136,22"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.jdt.ui/semanticHighlighting.abstractMethodInvocation.enabled"
+          value="true"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.jdt.ui/semanticHighlighting.autoboxing.bold"
+          value="true"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.jdt.ui/semanticHighlighting.autoboxing.enabled"
+          value="true"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.jdt.ui/semanticHighlighting.enum.enabled"
+          value="true"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.jdt.ui/semanticHighlighting.inheritedField.color"
+          value="255,0,255"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.jdt.ui/semanticHighlighting.inheritedField.enabled"
+          value="true"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.jdt.ui/semanticHighlighting.inheritedMethodInvocation.color"
+          value="255,0,255"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.jdt.ui/semanticHighlighting.inheritedMethodInvocation.enabled"
+          value="true"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.jdt.ui/semanticHighlighting.interface.color"
+          value="15,127,136"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.jdt.ui/semanticHighlighting.interface.enabled"
+          value="true"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.jdt.ui/semanticHighlighting.typeParameter.enabled"
+          value="true"/>
+      <description>Syntax Color for the java source editor</description>
+    </setupTask>
+    <setupTask
+        xsi:type="setup:CompoundTask"
+        name="unlimit_local_history">
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.core.resources/description.applyfilestatepolicy"
+          value="false">
+        <description>Discards the limit of the local history</description>
+      </setupTask>
+      <description>Discards the limit of the local history</description>
+    </setupTask>
+    <setupTask
+        xsi:type="setup:CompoundTask"
+        name="workspace_encoding_and_line_ending">
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.core.resources/encoding"
+          value="UTF-8">
+        <description>Set the workspace encoding so it works well in different OS</description>
+      </setupTask>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.core.runtime/line.separator"
+          value="&#xD;&#xA;"/>
+      <description>Sets the workspace encoding to UTF-8 and Windows line ending (\n\r)</description>
+    </setupTask>
+    <setupTask
+        xsi:type="setup:CompoundTask"
+        name="workspace_name">
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.ui.ide/WORKSPACE_NAME"
+          value="${installation.location|lastSegment|upper}"/>
+      <description>Sets the workspace name (helps to differentiate between multiple opened eclipse instances)</description>
+    </setupTask>
     <description></description>
   </setupTask>
   <setupTask
       xsi:type="setup:CompoundTask"
-      id="custom_user_keys"
       name="custom_user_keys">
     <setupTask
         xsi:type="setup:PreferenceTask"
