@@ -697,5 +697,5 @@
   <logicalProjectContainer
       xsi:type="setup:ProjectCatalog"
       href="index:/org.eclipse.setup#//@projectCatalogs[name='org.eclipse']"/>
-  <description></description>
+  <description>This setup file contains project unspecific settigs that do not change the source (just how it is displayed).</description>
 </setup:Project>
