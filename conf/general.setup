@@ -251,7 +251,19 @@
           xsi:type="setup:PreferenceTask"
           key="/instance/org.eclipse.ui.editors/writeOccurrenceIndicationColor"
           value="255,117,255"/>
-      <description>Annotations in text source editor</description>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.ui.editors/isWarningGoToNextNavigationTarget"
+          value="false"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.ui.editors/isOccurrenceGoToNextNavigationTarget"
+          value="true"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.ui.editors/isErrorGoToNextNavigationTarget"
+          value="true"/>
+      <description>Annotations and naviation in source code files with key ctrl+. is only set to errors and occurences (no warnings)</description>
     </setupTask>
     <setupTask
         xsi:type="setup:CompoundTask"
