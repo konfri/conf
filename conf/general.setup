@@ -277,6 +277,28 @@
     </setupTask>
     <setupTask
         xsi:type="setup:CompoundTask"
+        name="debug">
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.debug.ui/org.eclipse.debug.ui.remove_all_breakpoints_prompt"
+          value="false"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.debug.ui/org.eclipse.debug.ui.remove_all_expressions_prompt"
+          value="false"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.debug.ui/org.eclipse.debug.ui.remove_breakpoints_from_container_prompt"
+          value="false"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.debug.ui/org.eclipse.debug.ui.switch_perspective_on_suspend"
+          value="always">
+        <description>Open the associated perspective when an application suspends</description>
+      </setupTask>
+    </setupTask>
+    <setupTask
+        xsi:type="setup:CompoundTask"
         name="detail_formatters">
       <setupTask
           xsi:type="setup:ResourceCreationTask"
