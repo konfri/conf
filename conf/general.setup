@@ -676,6 +676,14 @@
           xsi:type="setup:PreferenceTask"
           key="/instance/org.eclipse.jdt.ui/semanticHighlighting.typeParameter.enabled"
           value="true"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.jdt.ui/semanticHighlighting.parameterVariable.color"
+          value="185,139,134"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.jdt.ui/semanticHighlighting.parameterVariable.enabled"
+          value="true"/>
       <description>Syntax Color for the java source editor</description>
     </setupTask>
     <setupTask
