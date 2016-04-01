@@ -522,6 +522,11 @@
           xsi:type="setup:PreferenceTask"
           key="/instance/org.eclipse.jdt.ui/Refactor.lightweight"
           value="false"/>
+      <setupTask
+          xsi:type="setup:ResourceCreationTask"
+          content="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;section name=&quot;Workbench&quot;>&#xA;&#x9;&lt;section name=&quot;org.eclipse.ltk.ui.refactoring.settings&quot;>&#xA;&#x9;&#x9;&lt;item value=&quot;true&quot; key=&quot;renameSetter&quot;/>&#xA;&#x9;&#x9;&lt;item value=&quot;false&quot; key=&quot;updateTextualMatches&quot;/>&#xA;&#x9;&#x9;&lt;item value=&quot;true&quot; key=&quot;renameGetter&quot;/>&#xA;&#x9;&lt;/section>&#x9;&#xA;&lt;/section>"
+          targetURL="${workspace.location|uri}/.metadata/.plugins/org.eclipse.jdt.ui/dialog_settings.xml"
+          encoding="UTF-8"/>
       <description>Disables the in-place renaming, instead the rename dialog is shown that selects the whole expression</description>
     </setupTask>
     <setupTask
