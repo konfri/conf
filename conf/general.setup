@@ -279,42 +279,70 @@
         xsi:type="setup:CompoundTask"
         name="debug">
       <setupTask
-          xsi:type="setup:PreferenceTask"
-          key="/instance/org.eclipse.debug.ui/org.eclipse.debug.ui.remove_all_breakpoints_prompt"
-          value="false"/>
+          xsi:type="setup:CompoundTask"
+          name="breakpoints">
+        <setupTask
+            xsi:type="setup:PreferenceTask"
+            key="/instance/org.eclipse.jdt.debug.ui/org.eclipse.jdt.debug.ui.prompt_delete_conditional_breakpoint"
+            value="false">
+          <description></description>
+        </setupTask>
+        <setupTask
+            xsi:type="setup:PreferenceTask"
+            key="/instance/org.eclipse.debug.ui/org.eclipse.debug.ui.remove_all_breakpoints_prompt"
+            value="false"/>
+        <setupTask
+            xsi:type="setup:PreferenceTask"
+            key="/instance/org.eclipse.debug.ui/org.eclipse.debug.ui.remove_all_expressions_prompt"
+            value="false"/>
+        <setupTask
+            xsi:type="setup:PreferenceTask"
+            key="/instance/org.eclipse.debug.ui/org.eclipse.debug.ui.remove_breakpoints_from_container_prompt"
+            value="false"/>
+        <description>no prompt while deleting breakpoins</description>
+      </setupTask>
       <setupTask
-          xsi:type="setup:PreferenceTask"
-          key="/instance/org.eclipse.debug.ui/org.eclipse.debug.ui.remove_all_expressions_prompt"
-          value="false"/>
+          xsi:type="setup:CompoundTask"
+          name="detail_formatters">
+        <setupTask
+            xsi:type="setup:ResourceCreationTask"
+            content="eclipse.preferences.version=1&#xA;org.eclipse.jdt.debug.ui.detail_formatters=java.lang.Throwable,java.io.ByteArrayOutputStream data \= new java.io.ByteArrayOutputStream(10000);\r\njava.io.PrintStream ps \= new java.io.PrintStream(data);\r\nprintStackTrace(ps);\r\nreturn data.toString();,1,java.util.Calendar,getTime();,1,java.util.Collection,StringBuilder sb \= new StringBuilder();\r\nfor (Object o \: this) {\r\n    sb.append(String.format(&quot;%s \\n&quot;\u0000 o.toString()));\r\n}\r\nreturn sb.toString();,1,java.util.HashSet,java.util.SortedSet&lt;?> sortedSet \= new java.util.TreeSet(this);\r\nStringBuilder sb \= new StringBuilder(&quot;SORTED\:\\n&quot;);\r\nfor (Object o \: sortedSet) {\r\n    sb.append(String.format(&quot;%s \\n&quot;\u0000 o.toString()));\r\n}\r\nreturn sb.toString();\r\n,1,java.util.LinkedHashSet,StringBuilder sb \= new StringBuilder();\r\nfor (Object o \: this) {\r\n    sb.append(String.format(&quot;%s \\n&quot;\u0000 o.toString()));\r\n}\r\nreturn sb.toString();,1,java.util.Map,// create a map that is sorted by keys\r\nSortedMap&lt;String\u0000 Object> sm \= new TreeMap&lt;String\u0000 Object>();\r\nfor (java.util.Map.Entry entry \: entrySet()) {\r\n    sm.put(entry.getKey().toString()\u0000 entry.getValue());\r\n}\r\n// print sorted by keys \r\nStringBuilder sb \= new StringBuilder(&quot;SORTED\:\\n&quot;);\r\nfor (java.util.Map.Entry entry \: sm.entrySet()) {\r\n    sb.append(String.format(&quot;%s \= %s \\n&quot;\u0000 entry.getKey()\u0000 entry.getValue()));\r\n}\r\nreturn sb.toString();,1,java.util.TreeSet,java.util.SortedSet&lt;?> sortedSet \= new java.util.TreeSet(this);\r\nStringBuilder sb \= new StringBuilder(&quot;SORTED\:\\n&quot;);\r\nfor (Object o \: sortedSet) {\r\n    sb.append(String.format(&quot;%s \\n&quot;\u0000 o.toString()));\r\n}\r\nreturn sb.toString();,1"
+            targetURL="${workspace.location|uri}/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.debug.ui.prefs"
+            encoding="UTF-8"/>
+        <description>Detail formater for Maps, Collections and Calendar in the eclipse debugger</description>
+      </setupTask>
       <setupTask
-          xsi:type="setup:PreferenceTask"
-          key="/instance/org.eclipse.debug.ui/org.eclipse.debug.ui.remove_breakpoints_from_container_prompt"
-          value="false"/>
+          xsi:type="setup:CompoundTask"
+          name="disable_activate_the_debug_view_when_a_breakpoint_is_hit">
+        <setupTask
+            xsi:type="setup:PreferenceTask"
+            key="/instance/org.eclipse.debug.ui/org.eclipse.debug.ui.activate_debug_view"
+            value="false"/>
+        <description>This prevents eclipse of showing the call stack tree if a break point is hit.</description>
+      </setupTask>
+      <setupTask
+          xsi:type="setup:CompoundTask"
+          name="step_filters">
+        <setupTask
+            xsi:type="setup:PreferenceTask"
+            key="/instance/org.eclipse.debug.core/org.eclipse.debug.core.USE_STEP_FILTERS"
+            value="true"/>
+        <setupTask
+            xsi:type="setup:PreferenceTask"
+            key="/instance/org.eclipse.jdt.debug.ui/org.eclipse.jdt.debug.ui.active_filters"
+            value="com.google.*,com.ibm.*,com.sun.*,java.*,javax.*,jrockit.*,org.apache.*,org.eclipse.*,org.hibernate.*,org.omg.*,org.osgi.*,sun.*,sunw.*,java.lang.ClassLoader"/>
+        <setupTask
+            xsi:type="setup:PreferenceTask"
+            key="/instance/org.eclipse.jdt.debug.ui/org.eclipse.jdt.debug.ui.inactive_filters"
+            value=""/>
+        <description>Excludes packages like java.* and javax.* from the debugging process</description>
+      </setupTask>
       <setupTask
           xsi:type="setup:PreferenceTask"
           key="/instance/org.eclipse.debug.ui/org.eclipse.debug.ui.switch_perspective_on_suspend"
           value="always">
         <description>Open the associated perspective when an application suspends</description>
       </setupTask>
-    </setupTask>
-    <setupTask
-        xsi:type="setup:CompoundTask"
-        name="detail_formatters">
-      <setupTask
-          xsi:type="setup:ResourceCreationTask"
-          content="eclipse.preferences.version=1&#xA;org.eclipse.jdt.debug.ui.detail_formatters=java.lang.Throwable,java.io.ByteArrayOutputStream data \= new java.io.ByteArrayOutputStream(10000);\r\njava.io.PrintStream ps \= new java.io.PrintStream(data);\r\nprintStackTrace(ps);\r\nreturn data.toString();,1,java.util.Calendar,getTime();,1,java.util.Collection,StringBuilder sb \= new StringBuilder();\r\nfor (Object o \: this) {\r\n    sb.append(String.format(&quot;%s \\n&quot;\u0000 o.toString()));\r\n}\r\nreturn sb.toString();,1,java.util.HashSet,java.util.SortedSet&lt;?> sortedSet \= new java.util.TreeSet(this);\r\nStringBuilder sb \= new StringBuilder(&quot;SORTED\:\\n&quot;);\r\nfor (Object o \: sortedSet) {\r\n    sb.append(String.format(&quot;%s \\n&quot;\u0000 o.toString()));\r\n}\r\nreturn sb.toString();\r\n,1,java.util.LinkedHashSet,StringBuilder sb \= new StringBuilder();\r\nfor (Object o \: this) {\r\n    sb.append(String.format(&quot;%s \\n&quot;\u0000 o.toString()));\r\n}\r\nreturn sb.toString();,1,java.util.Map,// create a map that is sorted by keys\r\nSortedMap&lt;String\u0000 Object> sm \= new TreeMap&lt;String\u0000 Object>();\r\nfor (java.util.Map.Entry entry \: entrySet()) {\r\n    sm.put(entry.getKey().toString()\u0000 entry.getValue());\r\n}\r\n// print sorted by keys \r\nStringBuilder sb \= new StringBuilder(&quot;SORTED\:\\n&quot;);\r\nfor (java.util.Map.Entry entry \: sm.entrySet()) {\r\n    sb.append(String.format(&quot;%s \= %s \\n&quot;\u0000 entry.getKey()\u0000 entry.getValue()));\r\n}\r\nreturn sb.toString();,1,java.util.TreeSet,java.util.SortedSet&lt;?> sortedSet \= new java.util.TreeSet(this);\r\nStringBuilder sb \= new StringBuilder(&quot;SORTED\:\\n&quot;);\r\nfor (Object o \: sortedSet) {\r\n    sb.append(String.format(&quot;%s \\n&quot;\u0000 o.toString()));\r\n}\r\nreturn sb.toString();,1"
-          targetURL="${workspace.location|uri}/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.debug.ui.prefs"
-          encoding="UTF-8"/>
-      <description>Detail formater for Maps, Collections and Calendar in the eclipse debugger</description>
-    </setupTask>
-    <setupTask
-        xsi:type="setup:CompoundTask"
-        name="disable_activate_the_debug_view_when_a_breakpoint_is_hit">
-      <setupTask
-          xsi:type="setup:PreferenceTask"
-          key="/instance/org.eclipse.debug.ui/org.eclipse.debug.ui.activate_debug_view"
-          value="false"/>
-      <description>This prevents eclipse of showing the call stack tree if a break point is hit.</description>
     </setupTask>
     <setupTask
         xsi:type="setup:CompoundTask"
@@ -355,15 +383,6 @@
           key="/instance/org.eclipse.ui.ide/EXIT_PROMPT_ON_CLOSE_LAST_WINDOW"
           value="false"/>
       <description>Suppress the prompt dialog while closing the last eclipse window (just close the last window)</description>
-    </setupTask>
-    <setupTask
-        xsi:type="setup:CompoundTask"
-        name="no_prompt_while_deleteting_conditional_breakpoints">
-      <setupTask
-          xsi:type="setup:PreferenceTask"
-          key="/instance/org.eclipse.jdt.debug.ui/org.eclipse.jdt.debug.ui.prompt_delete_conditional_breakpoint"
-          value="false"/>
-      <description>No prompt while deleting a conditional breakpoint.</description>
     </setupTask>
     <setupTask
         xsi:type="setup:CompoundTask"
@@ -614,23 +633,6 @@
           xsi:type="setup:PreferenceTask"
           key="/instance/org.eclipse.jdt.ui/content_assist_favorite_static_members"
           value="org.assertj.core.api.Assertions.*;org.mockito.BDDMockito.*"/>
-    </setupTask>
-    <setupTask
-        xsi:type="setup:CompoundTask"
-        name="step_filters">
-      <setupTask
-          xsi:type="setup:PreferenceTask"
-          key="/instance/org.eclipse.debug.core/org.eclipse.debug.core.USE_STEP_FILTERS"
-          value="true"/>
-      <setupTask
-          xsi:type="setup:PreferenceTask"
-          key="/instance/org.eclipse.jdt.debug.ui/org.eclipse.jdt.debug.ui.active_filters"
-          value="com.google.*,com.ibm.*,com.sun.*,java.*,javax.*,jrockit.*,org.apache.*,org.eclipse.*,org.hibernate.*,org.omg.*,org.osgi.*,sun.*,sunw.*,java.lang.ClassLoader"/>
-      <setupTask
-          xsi:type="setup:PreferenceTask"
-          key="/instance/org.eclipse.jdt.debug.ui/org.eclipse.jdt.debug.ui.inactive_filters"
-          value=""/>
-      <description>Excludes packages like java.* and javax.* from the debugging process</description>
     </setupTask>
     <setupTask
         xsi:type="setup:CompoundTask"
