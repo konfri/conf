@@ -282,6 +282,17 @@
           xsi:type="setup:CompoundTask"
           name="breakpoints">
         <setupTask
+            xsi:type="setup:CompoundTask"
+            name="group_by_file">
+          <setupTask
+              xsi:type="setup:ResourceCreationTask"
+              content="pref_state_memento.org.eclipse.debug.ui.BreakpointView=&lt;?xml version\=&quot;1.0&quot; encoding\=&quot;UTF-8&quot;?>\r\n&lt;VariablesViewMemento>\r\n&lt;breakpointOrganizers value\=&quot;org.eclipse.debug.ui.breakpointFileOrganizer&quot;/>\r\n&lt;/VariablesViewMemento>"
+              targetURL="${workspace.location|uri}/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.debug.ui.prefs"
+              encoding="UTF-8">
+          </setupTask>
+          <description>Group breakpoints by file</description>
+        </setupTask>
+        <setupTask
             xsi:type="setup:PreferenceTask"
             key="/instance/org.eclipse.jdt.debug.ui/org.eclipse.jdt.debug.ui.prompt_delete_conditional_breakpoint"
             value="false">
