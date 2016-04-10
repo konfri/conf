@@ -38,12 +38,22 @@
       <description>Visualizes the code coverage in the java editor</description>
     </setupTask>
     <setupTask
-        xsi:type="setup.p2:P2Task"
-        label="EcliPaint">
-      <requirement
-          name="org.eclipaint.feature.feature.group"/>
-      <repository
-          url="https://raw.githubusercontent.com/jabiercoding/eclipaint/master/updatesite/org.eclipaint.site/"/>
+        xsi:type="setup:CompoundTask"
+        name="EcliPaint">
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.ui.workbench/ENABLED_DECORATORS"
+          value="org.eclipaint.manager.decorator.icons.folder:true,org.eclipaint.manager..decorator.icons:true">
+      </setupTask>
+      <setupTask
+          xsi:type="setup.p2:P2Task"
+          label="EcliPaint">
+        <requirement
+            name="org.eclipaint.feature.feature.group"/>
+        <repository
+            url="https://raw.githubusercontent.com/jabiercoding/eclipaint/master/updatesite/org.eclipaint.site/"/>
+      </setupTask>
+      <description>Enables the java type decorator e.g. shows an I for interface types</description>
     </setupTask>
     <setupTask
         xsi:type="setup:CompoundTask"
@@ -288,8 +298,7 @@
               xsi:type="setup:ResourceCreationTask"
               content="pref_state_memento.org.eclipse.debug.ui.BreakpointView=&lt;?xml version\=&quot;1.0&quot; encoding\=&quot;UTF-8&quot;?>\r\n&lt;VariablesViewMemento>\r\n&lt;breakpointOrganizers value\=&quot;org.eclipse.debug.ui.breakpointFileOrganizer&quot;/>\r\n&lt;/VariablesViewMemento>"
               targetURL="${workspace.location|uri}/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.debug.ui.prefs"
-              encoding="UTF-8">
-          </setupTask>
+              encoding="UTF-8"/>
           <description>Group breakpoints by file</description>
         </setupTask>
         <setupTask
@@ -403,16 +412,6 @@
           key="/instance/org.eclipse.jdt.ui/org.eclipse.jdt.ui.typefilter.enabled"
           value="java.awt.*;javax.swing.*;"/>
       <description>Exclued packages from eclipse enterily like java.awt.* and javax.swing.*</description>
-    </setupTask>
-    <setupTask
-        xsi:type="setup:CompoundTask"
-        name="package_explorer_decorator">
-      <setupTask
-          xsi:type="setup:PreferenceTask"
-          key="/instance/org.eclipse.ui.workbench/ENABLED_DECORATORS"
-          value="org.eclipaint.manager.decorator.icons.folder:true,org.eclipaint.manager..decorator.icons:true,org.eclipse.m2e.core.mavenVersionDecorator:false,com.mountainminds.eclemma.ui.coverageDecorator:false,org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator:true,org.eclipse.jdt.ui.override.decorator:true,org.eclipse.jdt.ui.interface.decorator:true,org.eclipse.jdt.ui.buildpath.decorator:true,org.eclipse.m2e.core.maven2decorator:true,org.eclipse.mylyn.context.ui.decorator.interest:true,org.eclipse.mylyn.tasks.ui.decorators.task:true,org.eclipse.mylyn.team.ui.changeset.decorator:true,org.eclipse.pde.ui.binaryProjectDecorator:false,org.eclipse.ui.LinkedResourceDecorator:true,org.eclipse.ui.SymlinkDecorator:true,org.eclipse.ui.VirtualResourceDecorator:true,org.eclipse.ui.ContentTypeDecorator:true,org.eclipse.ui.ResourceFilterDecorator:false,org.moreunit.testdecorator:true,org.moreunit.core.decorators.testedFileDecorator:true,">
-        <description>Enables the java type decorator e.g. shows an I for interface types</description>
-      </setupTask>
     </setupTask>
     <setupTask
         xsi:type="setup:CompoundTask"
