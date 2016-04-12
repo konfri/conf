@@ -359,6 +359,12 @@
           value="always">
         <description>Open the associated perspective when an application suspends</description>
       </setupTask>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.debug.ui/org.eclipse.debug.ui.max_detail_length"
+          value="0">
+        <description>Unlimit the text in the detail pane of the Variables View (Debug Perspective)</description>
+      </setupTask>
     </setupTask>
     <setupTask
         xsi:type="setup:CompoundTask"
