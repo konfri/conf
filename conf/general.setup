@@ -365,6 +365,12 @@
           value="0">
         <description>Unlimit the text in the detail pane of the Variables View (Debug Perspective)</description>
       </setupTask>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.debug.ui/org.eclipse.debug.ui.detail_pane_word_wrap"
+          value="true">
+        <description>Set word wrap for the text in the detail pane of the Variables View (Debug Perspective)</description>
+      </setupTask>
     </setupTask>
     <setupTask
         xsi:type="setup:CompoundTask"
