@@ -43,8 +43,7 @@
       <setupTask
           xsi:type="setup:PreferenceTask"
           key="/instance/org.eclipse.ui.workbench/ENABLED_DECORATORS"
-          value="org.eclipaint.manager.decorator.icons.folder:true,org.eclipaint.manager..decorator.icons:true">
-      </setupTask>
+          value="org.eclipaint.manager.decorator.icons.folder:true,org.eclipaint.manager..decorator.icons:true"/>
       <setupTask
           xsi:type="setup.p2:P2Task"
           label="EcliPaint">
@@ -292,14 +291,11 @@
           xsi:type="setup:CompoundTask"
           name="breakpoints">
         <setupTask
-            xsi:type="setup:CompoundTask"
-            name="group_by_file">
-          <setupTask
-              xsi:type="setup:ResourceCreationTask"
-              content="pref_state_memento.org.eclipse.debug.ui.BreakpointView=&lt;?xml version\=&quot;1.0&quot; encoding\=&quot;UTF-8&quot;?>\r\n&lt;VariablesViewMemento>\r\n&lt;breakpointOrganizers value\=&quot;org.eclipse.debug.ui.breakpointFileOrganizer&quot;/>\r\n&lt;/VariablesViewMemento>"
-              targetURL="${workspace.location|uri}/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.debug.ui.prefs"
-              encoding="UTF-8"/>
-          <description>Group breakpoints by file</description>
+            xsi:type="setup:ResourceCreationTask"
+            content="org.eclipse.debug.ui.VariableView+org.eclipse.debug.ui.ToggleObjectBrowsersAction=true&#xA;pref_state_memento.org.eclipse.debug.ui.BreakpointView=&lt;?xml version\=&quot;1.0&quot; encoding\=&quot;UTF-8&quot;?>\r\n&lt;VariablesViewMemento>\r\n&lt;breakpointOrganizers value\=&quot;org.eclipse.debug.ui.breakpointFileOrganizer&quot;/>\r\n&lt;/VariablesViewMemento>&#xA;pref_state_memento.org.eclipse.debug.ui.VariableView=&lt;?xml version\=&quot;1.0&quot; encoding\=&quot;UTF-8&quot;?>\r\n&lt;VariablesViewMemento>\r\n&lt;PRESENTATION_CONTEXT_PROPERTIES IMemento.internal.id\=&quot;org.eclipse.debug.ui.VariableView&quot;>\r\n&lt;BOOLEAN BOOLEAN\=&quot;true&quot; IMemento.internal.id\=&quot;PRESENTATION_SHOW_LOGICAL_STRUCTURES&quot;/>\r\n&lt;/PRESENTATION_CONTEXT_PROPERTIES>\r\n&lt;/VariablesViewMemento>"
+            targetURL="${workspace.location|uri}/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.debug.ui.prefs"
+            encoding="UTF-8">
+          <description>Group breakpoints by file + enable the logical view</description>
         </setupTask>
         <setupTask
             xsi:type="setup:PreferenceTask"
