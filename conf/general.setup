@@ -200,6 +200,19 @@
       <repository
           url="http://infinitest.github.io"/>
     </setupTask>
+    <setupTask
+        xsi:type="setup:CompoundTask"
+        name="Postfix Code Completion">
+      <setupTask
+          xsi:type="setup.p2:P2Task"
+          label="Postfix Code Completion">
+        <requirement
+            name="org.eclipse.jdt.postfixcompletion.feature.feature.group"/>
+        <repository
+            url="https://raw.githubusercontent.com/trylimits/Eclipse-Postfix-Code-Completion/master/org.eclipse.jdt.postfixcompletion.updateSite/target/site/"/>
+      </setupTask>
+      <description></description>
+    </setupTask>
   </setupTask>
   <setupTask
       xsi:type="setup:CompoundTask"
