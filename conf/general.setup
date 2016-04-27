@@ -431,7 +431,7 @@
       <setupTask
           xsi:type="setup:PreferenceTask"
           key="/instance/org.eclipse.jdt.ui/org.eclipse.jdt.ui.typefilter.enabled"
-          value="java.awt.*;javax.swing.*;"/>
+          value="java.awt.*;javax.swing.*;javafx.*;"/>
       <description>Exclued packages from eclipse enterily like java.awt.* and javax.swing.*</description>
     </setupTask>
     <setupTask
