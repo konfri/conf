@@ -268,7 +268,7 @@
       <setupTask
           xsi:type="setup:PreferenceTask"
           key="/instance/org.eclipse.ui.editors/searchResultIndicationColor"
-          value="208,176,227"/>
+          value="255,255,60"/>
       <setupTask
           xsi:type="setup:PreferenceTask"
           key="/instance/org.eclipse.ui.editors/writeOccurrenceIndicationColor"
