@@ -727,7 +727,7 @@
       <setupTask
           xsi:type="setup:PreferenceTask"
           key="/instance/org.eclipse.jdt.ui/semanticHighlighting.parameterVariable.color"
-          value="185,139,134"/>
+          value="128,0,255"/>
       <setupTask
           xsi:type="setup:PreferenceTask"
           key="/instance/org.eclipse.jdt.ui/semanticHighlighting.parameterVariable.enabled"
