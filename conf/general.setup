@@ -213,6 +213,29 @@
       </setupTask>
       <description></description>
     </setupTask>
+    <setupTask
+        xsi:type="setup:CompoundTask"
+        name="Eclipse Extras">
+      <setupTask
+          xsi:type="setup.p2:P2Task">
+        <requirement
+            name="com.codeaffine.extras.jdt.feature.feature.group"/>
+        <requirement
+            name="com.codeaffine.extras.ide.feature.feature.group"/>
+        <requirement
+            name="com.codeaffine.extras.launch.feature.feature.group"/>
+        <repository
+            url="https://rherrmann.github.io/eclipse-extras/repository/"/>
+      </setupTask>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/com.codeaffine.extras.launch/com.codeaffine.extras.launch.CleanUpLaunchConfigurations"
+          value="true"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/com.codeaffine.extras.launch/com.codeaffine.extras.launch.CleanUpLaunchConfigurationTypes"
+          value="org.eclipse.jdt.junit.launchconfig"/>
+    </setupTask>
   </setupTask>
   <setupTask
       xsi:type="setup:CompoundTask"
