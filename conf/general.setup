@@ -285,6 +285,10 @@
           xsi:type="setup:PreferenceTask"
           key="/instance/org.eclipse.ui.editors/isErrorGoToNextNavigationTarget"
           value="true"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.ui.editors/warningIndicationInOverviewRuler"
+          value="false"/>
       <description>Annotations and naviation in source code files with key ctrl+. is only set to errors and occurences (no warnings)</description>
     </setupTask>
     <setupTask
