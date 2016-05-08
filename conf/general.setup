@@ -245,6 +245,34 @@
           key="/instance/com.codeaffine.extras.launch/com.codeaffine.extras.launch.CleanUpLaunchConfigurationTypes"
           value="org.eclipse.jdt.junit.launchconfig"/>
     </setupTask>
+    <setupTask
+        xsi:type="setup:CompoundTask"
+        name="IndentGuide">
+      <setupTask
+          xsi:type="setup.p2:P2Task">
+        <requirement
+            name="jp.sourceforge.pdt_tools.indentGuide.feature.feature.group"/>
+        <repository
+            url="https://sschaef.github.io/IndentGuide/update"/>
+      </setupTask>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/jp.sourceforge.pdt_tools.indentGuide/draw_blank_line"
+          value="true"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/jp.sourceforge.pdt_tools.indentGuide/line_alpha"
+          value="15"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/jp.sourceforge.pdt_tools.indentGuide/skip_comment_block"
+          value="true"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/jp.sourceforge.pdt_tools.indentGuide/content_types"
+          value="org.eclipse.core.runtime.text|org.eclipse.ltk.core.refactoring.refactoringIndex|org.eclipse.ui.views.log.log|org.eclipse.egit.patch|org.eclipse.wst.xml.core.xmlsource|org.eclipse.jdt.core.javaSource|org.eclipse.wb.core.java.javaSourceGUI|org.eclipse.mylyn.wikitext|org.eclipse.mylyn.wikitext.markdown|org.eclipse.mylyn.wikitext.confluence|org.eclipse.mylyn.wikitext.mediawiki|org.eclipse.mylyn.wikitext.twiki|org.eclipse.mylyn.wikitext.tracwiki|org.eclipse.mylyn.wikitext.textile|org.eclipse.wst.dtd.core.dtdsource|org.eclipse.core.runtime.xml|org.eclipse.pde.fragmentManifest|org.eclipse.pde.simpleCheatSheet|org.eclipse.pde.ctxHelpFile|org.eclipse.xsd|org.eclipse.pde.tocFile|org.eclipse.ant.core.antBuildFile|org.eclipse.pde.schema|org.eclipse.pde.productFile|org.eclipse.m2e.core.pomFile|org.eclipse.pde.compositeCheatSheet|org.eclipse.emf.ecore.xmi|org.eclipse.emf.emof|org.eclipse.oomph.targlets.ext|org.eclipse.oomph.setup|org.eclipse.emf.ecore|org.eclipse.oomph.targlets.targlet|org.eclipse.oomph.targlets.def|org.eclipse.pde.targetFile|org.eclipse.pde.siteManifest|org.eclipse.pde.categoryManifest|org.eclipse.jdt.junit.JUnitResult|org.eclipse.wst.xml.core.xmisource|org.eclipse.wst.xml.core.xslsource|org.eclipse.wst.xsd.core.xsdsource|org.eclipse.e4.content-type|org.eclipse.pde.featureManifest|org.eclipse.pde.ds.core.content-type|org.eclipse.pde.pluginManifest|org.eclipse.jdt.core.javaProperties|org.eclipse.pde.buildProperties|org.eclipse.pde.pluginProperties|org.eclipse.core.resources.preferences|org.eclipse.jdt.core.JARManifest|org.eclipse.pde.bundleManifest|org.eclipse.ltk.core.refactoring.refactoringHistory"/>
+      <description>Add vertical line on indentation columns.</description>
+    </setupTask>
   </setupTask>
   <setupTask
       xsi:type="setup:CompoundTask"
