@@ -12,15 +12,6 @@
       name="plugins">
     <setupTask
         xsi:type="setup.p2:P2Task"
-        label="ansi-econsole">
-      <requirement
-          name="net.mihai-nita.ansicon.feature.group"/>
-      <repository
-          url="http://www.mihai-nita.net/eclipse"/>
-      <description>A plugin that understands ANSI escape sequences to color Eclipse console output.</description>
-    </setupTask>
-    <setupTask
-        xsi:type="setup.p2:P2Task"
         label="instasearch">
       <requirement
           name="it.unibz.instasearch.feature.indigo.feature.group"/>
