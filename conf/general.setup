@@ -722,7 +722,7 @@
       <setupTask
           xsi:type="setup:PreferenceTask"
           key="/instance/org.eclipse.jdt.ui/content_assist_favorite_static_members"
-          value="org.assertj.core.api.Assertions.*;org.mockito.BDDMockito.*;org.mockito.Mockito.*"/>
+          value="org.assertj.core.api.Assertions.*;org.mockito.BDDMockito.*;org.mockito.Mockito.*;org.mockito.Matchers.*"/>
     </setupTask>
     <setupTask
         xsi:type="setup:CompoundTask"
