@@ -740,6 +740,10 @@
         name="syntax_color">
       <setupTask
           xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.jdt.ui/java_keyword_return_italic"
+          value="true"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
           key="/instance/org.eclipse.jdt.ui/java_keyword_return_underline"
           value="true"/>
       <setupTask
