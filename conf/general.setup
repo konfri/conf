@@ -880,6 +880,18 @@
           key="/instance/org.eclipse.ui.editors/showWhitespaceCharacters"
           value="true"/>
     </setupTask>
+    <setupTask
+        xsi:type="setup:CompoundTask"
+        name="autosave">
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.ui.workbench/SAVE_AUTOMATICALLY"
+          value="true"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.ui.workbench/SAVE_AUTOMATICALLY_INTERVAL"
+          value="10"/>
+    </setupTask>
     <description></description>
   </setupTask>
   <setupTask
