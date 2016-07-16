@@ -471,19 +471,6 @@
     </setupTask>
     <setupTask
         xsi:type="setup:CompoundTask"
-        name="hide_text_on_perspective_switcher">
-      <setupTask
-          xsi:type="setup:PreferenceTask"
-          key="/instance/org.eclipse.ui/SHOW_TEXT_ON_PERSPECTIVE_BAR"
-          value="false"/>
-      <setupTask
-          xsi:type="setup:PreferenceTask"
-          key="/instance/org.eclipse.ui.workbench/overridepresentation"
-          value="true"/>
-      <description>Hides the perspective switcher text and only shows the corresponding perspective icon</description>
-    </setupTask>
-    <setupTask
-        xsi:type="setup:CompoundTask"
         name="highlight_matching_brackets">
       <setupTask
           xsi:type="setup:PreferenceTask"
