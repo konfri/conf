@@ -168,6 +168,10 @@
           key="/instance/org.eclipse.m2e.core/eclipse.m2.updateProjects"
           value="true"/>
       <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.m2e.core/eclipse.m2.defaultPomEditorPage"
+          value="true"/>
+      <setupTask
           xsi:type="setup.p2:P2Task"
           label="m2e">
         <requirement
@@ -890,7 +894,7 @@
       <setupTask
           xsi:type="setup:PreferenceTask"
           key="/instance/org.eclipse.ui.workbench/SAVE_AUTOMATICALLY_INTERVAL"
-          value="10"/>
+          value="20"/>
     </setupTask>
     <description></description>
   </setupTask>
