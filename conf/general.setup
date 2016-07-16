@@ -895,6 +895,13 @@
           key="/instance/org.eclipse.ui.workbench/SAVE_AUTOMATICALLY_INTERVAL"
           value="20"/>
     </setupTask>
+    <setupTask
+        xsi:type="setup:EclipseIniTask"
+        option="-Xmx"
+        value="4096m"
+        vm="true">
+      <description>Set the heap space needed to work with the projects of ${scope.project.label}</description>
+    </setupTask>
     <description></description>
   </setupTask>
   <setupTask
