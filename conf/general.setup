@@ -11,13 +11,21 @@
       xsi:type="setup:CompoundTask"
       name="plugins">
     <setupTask
-        xsi:type="setup.p2:P2Task"
-        label="instasearch">
-      <requirement
-          name="it.unibz.instasearch.feature.indigo.feature.group"/>
-      <repository
-          url="http://dl.bintray.com/ajermakovics/InstaSearch"/>
-      <description>Fast search with apache lucene</description>
+        xsi:type="setup:CompoundTask"
+        name="instasearch">
+      <setupTask
+          xsi:type="setup.p2:P2Task"
+          label="instasearch">
+        <requirement
+            name="it.unibz.instasearch.feature.indigo.feature.group"/>
+        <repository
+            url="http://dl.bintray.com/ajermakovics/InstaSearch"/>
+        <description>Fast search with apache lucene</description>
+      </setupTask>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/it.unibz.instasearch/excludedFolders"
+          value="**/target;"/>
     </setupTask>
     <setupTask
         xsi:type="setup.p2:P2Task"
