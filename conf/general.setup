@@ -67,12 +67,20 @@
       </setupTask>
       <setupTask
           xsi:type="setup:PreferenceTask"
+          key="/instance/de.loskutov.anyedit.AnyEditTools/org.eclipse.jdt.ui.editor.tab.width"
+          value="4"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/de.loskutov.anyedit.AnyEditTools/saveAndConvert"
+          value="true"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
           key="/instance/de.loskutov.anyedit.AnyEditTools/saveAndTrim"
-          value="false"/>
+          value="true"/>
       <setupTask
           xsi:type="setup:PreferenceTask"
           key="/instance/de.loskutov.anyedit.AnyEditTools/saveDirtyBuffer"
-          value="false"/>
+          value="true"/>
       <description>In additions, some save actions are disabled that can be performed with the default eclispe save action.</description>
     </setupTask>
     <setupTask
