@@ -9,8 +9,8 @@
     xmlns:setup="http://www.eclipse.org/oomph/setup/1.0"
     xmlns:setup.p2="http://www.eclipse.org/oomph/setup/p2/1.0"
     xsi:schemaLocation="http://www.eclipse.org/oomph/setup/git/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/Git.ecore http://www.eclipse.org/oomph/setup/jdt/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/JDT.ecore http://www.eclipse.org/oomph/setup/projects/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/Projects.ecore"
-    name="conf"
-    label="conf">
+    name="eclipse-configuration"
+    label="eclipse-configuration">
   <setupTask
       xsi:type="jdt:JRETask"
       version="JavaSE-1.7"
@@ -31,7 +31,7 @@
   <setupTask
       xsi:type="setup:VariableTask"
       name="eclipse.target.platform"
-      defaultValue="Mars"
+      defaultValue="Neon"
       storageURI="scope://Workspace"/>
   <setupTask
       xsi:type="setup:CompoundTask"
@@ -89,8 +89,8 @@
   <setupTask
       xsi:type="git:GitCloneTask"
       id="git.clone"
-      remoteURI="https://github.com/konfri/conf.git"
-      pushURI="https://github.com/konfri/conf.git">
+      remoteURI="https://github.com/konfri/eclipse-configuration.git"
+      pushURI="https://github.com/konfri/eclipse-configuration.git">
     <annotation
         source="http://www.eclipse.org/oomph/setup/InducedChoices">
       <detail
