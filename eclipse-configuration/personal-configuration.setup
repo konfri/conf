@@ -841,7 +841,7 @@
       <setupTask
           xsi:type="setup:PreferenceTask"
           key="/instance/org.eclipse.core.runtime/line.separator"
-          value="&#xD;&#xA;"/>
+          value="&#xA;"/>
       <description>Sets the workspace encoding to UTF-8 and Windows line ending (\n\r)</description>
     </setupTask>
     <setupTask
