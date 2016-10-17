@@ -584,7 +584,7 @@
           content="org.eclipse.ui.internal.views.markers.CachedMarkerBuilderorg.eclipse.ui.views.ProblemView=&lt;?xml version\=&quot;1.0&quot; encoding\=&quot;UTF-8&quot;?>\r\n&lt;filterGroups andFilters\=&quot;false&quot; markerLimit\=&quot;100&quot; markerLimitEnabled\=&quot;false&quot;>\r\n&lt;filterGroup IMemento.internal.id\=&quot;All Errors&quot; enabled\=&quot;true&quot; filterLimit\=&quot;-1&quot; scope\=&quot;0&quot; workingSet\=&quot;Aggregate for window 1459531522911&quot;>\r\n&lt;fieldFilter IMemento.internal.id\=&quot;org.eclipse.ui.ide.severityAndDescriptionField&quot; containsModifier\=&quot;CONTAINS&quot; containsText\=&quot;&quot; selectedSeverities\=&quot;4&quot;/>\r\n&lt;fieldFilter IMemento.internal.id\=&quot;org.eclipse.ui.ide.markerType&quot;/>\r\n&lt;/filterGroup>\r\n&lt;filterGroup IMemento.internal.id\=&quot;Warnings on Selection&quot; enabled\=&quot;true&quot; filterLimit\=&quot;-1&quot; scope\=&quot;2&quot; workingSet\=&quot;Aggregate for window 1459531522911&quot;>\r\n&lt;fieldFilter IMemento.internal.id\=&quot;org.eclipse.ui.ide.severityAndDescriptionField&quot; containsModifier\=&quot;CONTAINS&quot; containsText\=&quot;&quot; selectedSeverities\=&quot;2&quot;/>\r\n&lt;fieldFilter IMemento.internal.id\=&quot;org.eclipse.ui.ide.markerType&quot;/>\r\n&lt;/filterGroup>\r\n&lt;filterGroup IMemento.internal.id\=&quot;Errors/Warnings on Selection&quot; enabled\=&quot;false&quot; filterLimit\=&quot;-1&quot; scope\=&quot;2&quot; workingSet\=&quot;Aggregate for window 1459531522911&quot;>\r\n&lt;fieldFilter IMemento.internal.id\=&quot;org.eclipse.ui.ide.severityAndDescriptionField&quot; containsModifier\=&quot;CONTAINS&quot; containsText\=&quot;&quot; selectedSeverities\=&quot;6&quot;/>\r\n&lt;fieldFilter IMemento.internal.id\=&quot;org.eclipse.ui.ide.markerType&quot;/>\r\n&lt;/filterGroup>\r\n&lt;filterGroup IMemento.internal.id\=&quot;Errors/Warnings on Project&quot; enabled\=&quot;false&quot; filterLimit\=&quot;-1&quot; scope\=&quot;3&quot; workingSet\=&quot;Aggregate for window 1459531522911&quot;>\r\n&lt;fieldFilter IMemento.internal.id\=&quot;org.eclipse.ui.ide.severityAndDescriptionField&quot; containsModifier\=&quot;CONTAINS&quot; containsText\=&quot;&quot; selectedSeverities\=&quot;6&quot;/>\r\n&lt;fieldFilter IMemento.internal.id\=&quot;org.eclipse.ui.ide.markerType&quot;/>\r\n&lt;/filterGroup>\r\n&lt;/filterGroups>"
           targetURL="${workspace.location|uri}/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.ide.prefs"
           encoding="UTF-8"/>
-      <description>unlimit items shown in problems view and only show warnings for the current selection</description>
+      <description>Unlimit the items shown in problems view and only show warnings for the current selection</description>
     </setupTask>
     <setupTask
         xsi:type="setup:CompoundTask"
@@ -899,11 +899,7 @@
       <setupTask
           xsi:type="setup:PreferenceTask"
           key="/instance/org.eclipse.ui.workbench/SAVE_AUTOMATICALLY"
-          value="true"/>
-      <setupTask
-          xsi:type="setup:PreferenceTask"
-          key="/instance/org.eclipse.ui.workbench/SAVE_AUTOMATICALLY_INTERVAL"
-          value="20"/>
+          value="false"/>
     </setupTask>
     <setupTask
         xsi:type="setup:EclipseIniTask"
