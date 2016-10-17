@@ -108,7 +108,7 @@
       <requirement
           name="EclipseRunnerFeature.feature.group"/>
       <repository
-          url="https://raw.githubusercontent.com/scharf/eclipserunnerplugin/master/EclipseRunnerSite/"/>
+          url="https://raw.githubusercontent.com/konfri/eclipserunnerplugin/master/EclipseRunnerRepository/target/repository"/>
       <description>Provides a view that lists all run configurations</description>
     </setupTask>
     <setupTask
