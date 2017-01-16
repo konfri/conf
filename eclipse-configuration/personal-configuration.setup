@@ -247,11 +247,15 @@
       <setupTask
           xsi:type="setup.p2:P2Task">
         <requirement
-            name="com.codeaffine.extras.jdt.feature.feature.group"/>
+            name="com.codeaffine.extras.imageviewer.feature.feature.group"/>
+        <requirement
+            name="com.codeaffine.extras.launch.feature.feature.group"/>
         <requirement
             name="com.codeaffine.extras.ide.feature.feature.group"/>
         <requirement
-            name="com.codeaffine.extras.launch.feature.feature.group"/>
+            name="com.codeaffine.extras.workingset.feature.feature.group"/>
+        <requirement
+            name="com.codeaffine.extras.jdt.feature.feature.group"/>
         <requirement
             name="com.codeaffine.extras.workingset.feature.feature.group"/>
         <repository
