@@ -253,8 +253,6 @@
         <requirement
             name="com.codeaffine.extras.ide.feature.feature.group"/>
         <requirement
-            name="com.codeaffine.extras.workingset.feature.feature.group"/>
-        <requirement
             name="com.codeaffine.extras.jdt.feature.feature.group"/>
         <requirement
             name="com.codeaffine.extras.workingset.feature.feature.group"/>
