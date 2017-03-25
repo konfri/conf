@@ -297,12 +297,25 @@
       <description>Add vertical line on indentation columns.</description>
     </setupTask>
     <setupTask
-        xsi:type="setup.p2:P2Task"
-        label="Clean-Code-Method-Sorter">
-      <requirement
-          name="ccms_feature.feature.group"/>
-      <repository
-          url="http://parzonka.com/tud/ccms"/>
+        xsi:type="setup:CompoundTask"
+        name="method_sorter">
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/ccms_plugin/Invocation start-point strategy"
+          value="Use existing order"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/ccms_plugin/Ordering priorities"
+          value="Separate by ACCESS LEVEL#Apply INVOCATION ordering#Keep ORIGINAL source position#Apply LEXICAL ordering"/>
+      <setupTask
+          xsi:type="setup.p2:P2Task"
+          label="Clean-Code-Method-Sorter">
+        <requirement
+            name="ccms_feature.feature.group"/>
+        <repository
+            url="http://parzonka.com/tud/ccms"/>
+      </setupTask>
+      <description>Sort methods that public ones stay unchange on top and the private ones will more down (according to invocation order).</description>
     </setupTask>
   </setupTask>
   <setupTask
