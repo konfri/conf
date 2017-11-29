@@ -37,15 +37,6 @@
       <description></description>
     </setupTask>
     <setupTask
-        xsi:type="setup.p2:P2Task"
-        label="eclemma">
-      <requirement
-          name="com.mountainminds.eclemma.feature.feature.group"/>
-      <repository
-          url="http://update.eclemma.org"/>
-      <description>Visualizes the code coverage in the java editor</description>
-    </setupTask>
-    <setupTask
         xsi:type="setup:CompoundTask"
         name="EcliPaint">
       <setupTask
