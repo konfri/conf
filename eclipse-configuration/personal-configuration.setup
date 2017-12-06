@@ -675,17 +675,6 @@
     </setupTask>
     <setupTask
         xsi:type="setup:CompoundTask"
-        name="run_in_background">
-      <setupTask
-          xsi:type="setup:PreferenceTask"
-          key="/instance/org.eclipse.ui.workbench/RUN_IN_BACKGROUND"
-          value="true">
-        <description>Tasks are always executed in background</description>
-      </setupTask>
-      <description>Run task always in the background</description>
-    </setupTask>
-    <setupTask
-        xsi:type="setup:CompoundTask"
         name="save_dirty_editors">
       <setupTask
           xsi:type="setup:PreferenceTask"
