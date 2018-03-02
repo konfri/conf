@@ -90,7 +90,7 @@
       <requirement
           name="org.moreunit.mock.feature.group"/>
       <repository
-          url="http://moreunit.sourceforge.net/update-site/"/>
+          url="https://moreunit.github.io/eclipse-update-site/"/>
       <description></description>
     </setupTask>
     <setupTask
