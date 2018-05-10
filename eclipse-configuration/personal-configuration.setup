@@ -889,13 +889,6 @@
           value="false"/>
     </setupTask>
     <setupTask
-        xsi:type="setup:EclipseIniTask"
-        option="-Xmx"
-        value="4096m"
-        vm="true">
-      <description>Set the heap space needed to work with the projects of ${scope.project.label}</description>
-    </setupTask>
-    <setupTask
         xsi:type="setup:CompoundTask"
         name="comparison">
       <setupTask
@@ -904,6 +897,23 @@
           value="true">
         <description>Show original source on the left and the updated version on the right.</description>
       </setupTask>
+    </setupTask>
+    <setupTask
+        xsi:type="setup:CompoundTask"
+        name="whitespaces">
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.ui.editors/showLeadingIdeographicSpaces"
+          value="true"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.ui.editors/showLeadingSpaces"
+          value="true"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.ui.editors/showLeadingTabs"
+          value="true"/>
+      <description></description>
     </setupTask>
     <description></description>
   </setupTask>
@@ -917,6 +927,13 @@
       <description></description>
     </setupTask>
     <description>Custom user shortcuts</description>
+  </setupTask>
+  <setupTask
+      xsi:type="setup:EclipseIniTask"
+      option="-Xmx"
+      value="4096m"
+      vm="true">
+    <description>Set the heap space needed to work with the projects of ${scope.project.label}</description>
   </setupTask>
   <stream name="develop"
       label="develop"/>
