@@ -842,7 +842,7 @@
     </setupTask>
     <setupTask
         xsi:type="setup:CompoundTask"
-        name="show_leading_whitespace_characters">
+        name="whitespace_characters">
       <setupTask
           xsi:type="setup:PreferenceTask"
           key="/instance/org.eclipse.ui.editors/showCarriageReturn"
@@ -862,7 +862,7 @@
       <setupTask
           xsi:type="setup:PreferenceTask"
           key="/instance/org.eclipse.ui.editors/showLeadingIdeographicSpaces"
-          value="false"/>
+          value="true"/>
       <setupTask
           xsi:type="setup:PreferenceTask"
           key="/instance/org.eclipse.ui.editors/showLeadingSpaces"
@@ -870,7 +870,7 @@
       <setupTask
           xsi:type="setup:PreferenceTask"
           key="/instance/org.eclipse.ui.editors/showLeadingTabs"
-          value="false"/>
+          value="true"/>
       <setupTask
           xsi:type="setup:PreferenceTask"
           key="/instance/org.eclipse.ui.editors/showLineFeed"
@@ -897,23 +897,6 @@
           value="true">
         <description>Show original source on the left and the updated version on the right.</description>
       </setupTask>
-    </setupTask>
-    <setupTask
-        xsi:type="setup:CompoundTask"
-        name="whitespaces">
-      <setupTask
-          xsi:type="setup:PreferenceTask"
-          key="/instance/org.eclipse.ui.editors/showLeadingIdeographicSpaces"
-          value="true"/>
-      <setupTask
-          xsi:type="setup:PreferenceTask"
-          key="/instance/org.eclipse.ui.editors/showLeadingSpaces"
-          value="true"/>
-      <setupTask
-          xsi:type="setup:PreferenceTask"
-          key="/instance/org.eclipse.ui.editors/showLeadingTabs"
-          value="true"/>
-      <description></description>
     </setupTask>
     <description></description>
   </setupTask>
